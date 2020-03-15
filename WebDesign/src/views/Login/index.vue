@@ -42,12 +42,14 @@
     </div>
 </template>
 <script>
+import { reactive, ref, ifRef, onMounted } from '@vue/composition-api'
 import { stripscript, validateEmail, validatePass, validateVCode } from '@/utils/validate'//字符过滤
 export default {
     name: 'login',
-    data(){
+    //setup(props, context){
+    setup(props, { refs }){
       //验证用户名是否为邮箱
-      var validateUsername = (rule, value, callback) => {
+      let validateUsername = (rule, value, callback) => {
         if (value === '') {
           callback(new Error('请输入用户名'));
         } else if(validateEmail(value)){
@@ -57,9 +59,9 @@ export default {
         }
       };
       //验证密码
-      var validatePassword = (rule, value, callback) => {
-        this.ruleForm.password = stripscript(value) //过滤后的数据
-        value = this.ruleForm.password
+      let validatePassword = (rule, value, callback) => {
+        ruleForm.password = stripscript(value) //过滤后的数据
+        value = ruleForm.password
         if (value === '') {
           callback(new Error('请输入密码'));
         } else if (validatePass(value)){
@@ -69,10 +71,10 @@ export default {
         }
       };
       //验证重复密码
-      var validatePasswords = (rule, value, callback) => {
-        if(this.model === 'login'){ callback(); }
-        this.ruleForm.passwords = stripscript(value) //过滤后的数据
-        value = this.ruleForm.passwords
+      let validatePasswords = (rule, value, callback) => {
+        if(model.value === 'login'){ callback(); }
+        ruleForm.passwords = stripscript(value) //过滤后的数据
+        value = ruleForm.passwords
         if (value === '') {
           callback(new Error('请输入密码'));
         } else if (value != this.ruleForm.password){
@@ -82,9 +84,9 @@ export default {
         }
       };
       //验证验证码
-      var validateCode = (rule, value, callback) => {
-        this.ruleForm.code = stripscript(value) //过滤后的数据
-        value = this.ruleForm.code
+      let validateCode = (rule, value, callback) => {
+        ruleForm.code = stripscript(value) //过滤后的数据
+        value = ruleForm.code
         if (value === '') {
           return callback(new Error('请输入验证码'));
         }else if(validateVCode(value)){
@@ -93,21 +95,22 @@ export default {
           callback();
         }
       };
-        return {
-            menuTab: [
-                { txt: '登录', current:true, type: 'login' },
-                { txt: '注册', current:false,type: 'register' }
-            ],
-            //模块
-            model: 'login',
-            //表单的数据
-            ruleForm: {
-          username: '',
-          password: '',
-          passwords: '',
-          code: ''
-        },
-        rules: {
+      //存放data数据、自定义函数、生命周期
+      const menuTab = reactive([
+        { txt: '登录', current: true, type: 'login' },
+        { txt: '注册', current: false, type: 'register' }
+      ]);
+      // 模块值 
+      const model = ref('login');
+      // 表单绑定数据
+      const ruleForm = reactive({
+        username: '',
+        password: '',
+        passwords: '',
+        code: ''
+      });
+      // 表单的验证
+      const rules = reactive ({
           username: [
             { validator: validateUsername, trigger: 'blur' }
           ],
@@ -120,33 +123,48 @@ export default {
           code: [
             { validator: validateCode, trigger: 'blur' }
           ]
-        }
-        }
-    },
-    created(){},
-    mounted(){
-        
-    },
-    methods: {
-        toggleMneu(data){
-            this.menuTab.forEach(elem =>{
+        });
+      /**
+       * 声明函数
+       */
+      const toggleMneu = (data => {
+        menuTab.forEach(elem =>{
                 elem.current =false
             });
             data.current = true
             //修改模块指
-            this.model = data.type
-        },
-        submitForm(formName) {
-        this.$refs[formName].validate((valid) => {
+            model.value = data.type
+      })
+      const submitForm = (formName => {
+        refs[formName].validate((valid) => {
           if (valid) {
             alert('submit!');
           } else {
             console.log('error submit!!');
             return false;
           }
-        });
+        })
+      }) 
+      /**
+       * 生命周期
+       */
+      // 挂载完成后
+      onMounted(() => {
+        
+      })
+      
+      return{
+        menuTab,
+        model,
+        ruleForm,
+        rules,
+        toggleMneu,
+        submitForm
       }
-    }
+    },
+    data(){
+      
+    },
 }
 </script>
 <style lang="scss" scoped>
