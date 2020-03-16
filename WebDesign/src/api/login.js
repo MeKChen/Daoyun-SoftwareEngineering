@@ -11,10 +11,6 @@ export function GetSms(data) {
   });
 }
 /**
- * 获取用户角色
- */
-
-/**
  * 登录
  */
 export function Login(data) {
@@ -24,7 +20,6 @@ export function Login(data) {
     data
   });
 }
-
 /**
  * 注册
  */

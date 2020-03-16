@@ -1,10 +1,11 @@
 import axios from "axios";
-import { Message } from 'element-ui';
+import { Message } from "element-ui";
 // 创建axios，赋给变量service
-const BASEURL = process.env.NODE_ENV === 'production' ? '' : '/devApi';
+const BASEURL = process.env.NODE_ENV === "production" ? "" : "/devApi";
 const service = axios.create({
   baseURL: BASEURL,
-  timeout: 1000,
+  //超时的时间
+  timeout: 5000
 });
 // 添加请求拦截器
 service.interceptors.request.use(
@@ -22,11 +23,11 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   function(response) {
     // 对响应数据做点什么
-    let data = response.data
-    if(data.resCode !== 0) {
+    let data = response.data;
+    if (data.resCode !== 0) {
       Message.error(data.message);
       return Promise.reject(data);
-    }else{
+    } else {
       return response;
     }
   },
@@ -37,4 +38,3 @@ service.interceptors.response.use(
 );
 
 export default service;
-
