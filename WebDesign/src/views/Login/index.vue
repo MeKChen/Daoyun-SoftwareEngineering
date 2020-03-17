@@ -242,10 +242,10 @@ export default {
       GetSms(requestData)
         .then(response => {
           let data = response.data;
-          root.$message({
+          /*root.$message({
             message: data.message,
             type: "success"
-          });
+          });*/
           // 启用登录或注册按钮
           loginButtonStatus.value = false;
           // 设定倒计时
