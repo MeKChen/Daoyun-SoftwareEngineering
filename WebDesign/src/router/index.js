@@ -12,6 +12,18 @@ export default new Router({
       path: "/login",
       name: "Login",
       component: () => import("../views/Login/index.vue")
+    },
+    {
+      path: "/attendance",
+      name: "Attendance",
+      component: () => import("../views/Layout/index.vue"),
+      children: [
+        {
+          path: "/attendance",
+          name: "Attendance",
+          component: () => import("../views/Attendance/index.vue")
+        }
+      ]
     }
   ]
 });

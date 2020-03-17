@@ -7,10 +7,11 @@ const service = axios.create({
   //超时的时间
   timeout: 5000
 });
-// 添加请求拦截器
+// 添加请求拦截器,请求接口之前做一些数据处理
 service.interceptors.request.use(
   function(config) {
     // 在发送请求之前做些什么
+    // 后台需要前端传的数据（在请求头中添加参数）
     return config;
   },
   function(error) {
@@ -19,7 +20,7 @@ service.interceptors.request.use(
   }
 );
 
-// 添加响应拦截器
+// 添加响应拦截器,请求接口后，返回数据进行拦截
 service.interceptors.response.use(
   function(response) {
     // 对响应数据做点什么

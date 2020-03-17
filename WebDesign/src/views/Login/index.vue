@@ -205,11 +205,11 @@ export default {
       data.current = true;
       // 修改模块值
       model.value = data.type;
-      resetFromData();
+      resetFormData();
       clearCountDown();
     };
     // 清除表单数据
-    const resetFromData = () => {
+    const resetFormData = () => {
       // 重置表单
       refs.loginForm.resetFields(); // 3.0
     };
@@ -274,20 +274,25 @@ export default {
      * 登录
      */
     const login = () => {
-      let repuestData = {
+      let requestData = {
         username: ruleForm.username,
         password: sha1(ruleForm.password),
         code: ruleForm.code
       };
-      root.$store
-        .dispatch("app/login", repuestData)
+      Login(requestData).then(response => {
+        root.$router.push({
+          name: 'Attendance'
+        })
+      }).catch(error => {})
+      /*root.$store
+        .dispatch("app/login", requestData)
         .then(response => {
           // 页面跳转
           root.$router.push({
-            name: "Console"
+            name: "Attendance"
           });
         })
-        .catch(error => {});
+        .catch(error => {});*/
     };
     /**
      * 注册
