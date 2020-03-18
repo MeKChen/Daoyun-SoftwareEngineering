@@ -1,11 +1,11 @@
 <template>
-    <div>签到信息</div>
+    <div>教师信息</div>
 </template>
 <script>
 export default {
     name: 'attendanceInfo',
     setup(props) {
-
+        
     }
 }
 </script>

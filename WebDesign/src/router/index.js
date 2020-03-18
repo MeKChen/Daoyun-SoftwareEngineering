@@ -6,22 +6,99 @@ export default new Router({
   routes: [
     {
       path: "/",
-      redirect: "login"
+      redirect: "login",
+      hidden: true,
+      meta: {
+        name: "主页"
+      }
     },
     {
       path: "/login",
       name: "Login",
+      hidden: true,
+      meta: {
+        name: "登录"
+      },
       component: () => import("../views/Login/index.vue")
     },
+    /**
+     * 用户信息
+     */
     {
-      path: "/attendance",
-      name: "Attendance",
+      path: "/console",
+      name: "Console",
+      redirect: "stuIndex",
+      meta: {
+        name: "用户信息"
+      },
       component: () => import("../views/Layout/index.vue"),
       children: [
         {
+          path: "/stuIndex",
+          name: "StuIndex",
+          meta: {
+            name: "学生信息"
+          },
+          component: () => import("../views/User/index.vue")
+        },
+        {
+          path: "/teaIndex",
+          name: "TeaIndex",
+          meta: {
+            name: "教师信息"
+          },
+          component: () => import("../views/User/teacher.vue")
+        }
+      ]
+    },
+    /**
+     * 签到管理
+     */
+    {
+      path: "/attendanceManage",
+      name: "AttendanceManage",
+      //redirect: "attendanceInfo",
+      meta: {
+        name: "签到管理"
+      },
+      component: () => import("../views/Layout/index.vue"),
+      children: [
+        {
+          path: "/attendanceInfo",
+          name: "AttendanceInfo",
+          meta: {
+            name: "签到信息"
+          },
+          component: () => import("../views/Attendance/index.vue")
+        },
+        {
           path: "/attendance",
           name: "Attendance",
-          component: () => import("../views/Attendance/index.vue")
+          meta: {
+            name: "课程签到"
+          },
+          component: () => import("../views/Attendance/attend.vue")
+        }
+      ]
+    },
+    /**
+     * 角色分配
+     */
+    {
+      path: "/role",
+      name: "Role",
+      meta: {
+        name: "角色分配"
+      },
+      component: () => import("../views/Layout/index.vue"),
+      children: [
+        {
+          path: "/power",
+          name: "Power",
+          meta: {
+            name: "权限分配"
+          },
+          component: () => import("../views/Power/index.vue")
         }
       ]
     }
