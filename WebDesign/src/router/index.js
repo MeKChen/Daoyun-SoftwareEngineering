@@ -2,6 +2,8 @@ import Vue from "vue";
 import Router from "vue-router";
 Vue.use(Router);
 
+import Layout from '@/views/Layout/index.vue'
+
 export default new Router({
   routes: [
     {
@@ -29,9 +31,10 @@ export default new Router({
       name: "Console",
       redirect: "stuIndex",
       meta: {
-        name: "用户信息"
+        name: "用户信息",
+        icon: "el-icon-user"
       },
-      component: () => import("../views/Layout/index.vue"),
+      component: Layout,
       children: [
         {
           path: "/stuIndex",
@@ -59,9 +62,10 @@ export default new Router({
       name: "AttendanceManage",
       //redirect: "attendanceInfo",
       meta: {
-        name: "签到管理"
+        name: "签到管理",
+        icon: "el-icon-edit"
       },
-      component: () => import("../views/Layout/index.vue"),
+      component: Layout,
       children: [
         {
           path: "/attendanceInfo",
@@ -88,9 +92,10 @@ export default new Router({
       path: "/role",
       name: "Role",
       meta: {
-        name: "角色分配"
+        name: "角色分配",
+        icon: "el-icon-s-custom"
       },
-      component: () => import("../views/Layout/index.vue"),
+      component: Layout,
       children: [
         {
           path: "/power",

@@ -9,9 +9,9 @@
       router
     >
     <template v-for="(item, index) in routers">
-      <el-submenu v-if="!item.hidden" :key="item.id" :index="index">
+      <el-submenu v-if="!item.hidden" :key="item.id" :index="index + ''">
         <template slot="title">
-          <i class="el-icon-document"></i>
+          <i :class="item.meta.icon"></i>
           <span slot="title">{{ item.meta.name }}</span>
         </template>
         <el-menu-item-group>
@@ -56,7 +56,7 @@ export default {
 @import "../../../styles/config.scss";
 #nav-wrap {
   position: fixed;
-  top: 70px;
+  top: $layoutHeader;
   left: 0;
   width: $navMenu;
   height: 100vh;
