@@ -8,7 +8,8 @@ export default new Router({
   routes: [
     {
       path: "/",
-      redirect: "login",
+      //redirect: "login",
+      redirect: "console",
       hidden: true,
       meta: {
         name: "主页"
