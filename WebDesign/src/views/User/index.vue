@@ -24,12 +24,12 @@
                     <div class="label-wrap stuName">
                         <label for="">学院：</label>
                         <div class="wrap-content">
-                            <el-select v-model="colvalue" placeholder="请选择" style="width: 100%">
+                            <el-select v-model="colValue" placeholder="请选择" style="width: 100%">
                                 <el-option
-                                    v-for="item in coloptions"
-                                    :key="item.colvalue"
+                                    v-for="item in colOptions"
+                                    :key="item.colValue"
                                     :label="item.label"
-                                    :value="item.colvalue">
+                                    :value="item.colValue">
                                 </el-option>
                             </el-select>
                         </div>
@@ -40,12 +40,12 @@
                     <div class="label-wrap stuName">
                         <label for="">专业：</label>
                         <div class="wrap-content">
-                            <el-select v-model="spevalue" placeholder="请选择" style="width: 100%">
+                            <el-select v-model="speValue" placeholder="请选择" style="width: 100%">
                                 <el-option
-                                    v-for="item in speoptions"
-                                    :key="item.spevalue"
+                                    v-for="item in speOptions"
+                                    :key="item.speValue"
                                     :label="item.label"
-                                    :value="item.spevalue">
+                                    :value="item.speValue">
                                 </el-option>
                             </el-select>
                         </div>
@@ -56,12 +56,12 @@
                     <div class="label-wrap stuName">
                         <label for="">年级：</label>
                         <div class="wrap-content">
-                            <el-select v-model="yearvalue" placeholder="请选择" style="width: 100%">
+                            <el-select v-model="yearValue" placeholder="请选择" style="width: 100%">
                                 <el-option
-                                    v-for="item in yearoptions"
-                                    :key="item.yearvalue"
+                                    v-for="item in yearOptions"
+                                    :key="item.yearValue"
                                     :label="item.label"
-                                    :value="item.yearvalue">
+                                    :value="item.yearValue">
                                 </el-option>
                             </el-select>
                         </div>
@@ -70,7 +70,7 @@
 
                 <div  class="stuButton">
                     <el-button type="primary">搜索</el-button>
-                    <el-button type="primary">新增</el-button>
+                    <el-button type="primary" @click="stuDia=true">新增</el-button>
                 </div>
             </el-row>
             <el-row>
@@ -131,52 +131,62 @@
             </el-pagination>
           </el-col>
         </el-row>
+
+        <!--弹窗：新增-->
+        <StuDialog :flag="stuDia" @close="close"/>
+
     </div>
 </template>
 <script>
+import StuDialog from "./dialog/stuinfo.vue";
 import { reactive, ref } from '@vue/composition-api';
 export default {
     name: 'stuInfo',
+    components: { StuDialog },
     setup(props) {
+        /**
+         * 数据
+         */
+        const stuDia = ref(false);
         // 学院选项
-        const coloptions = reactive([{
-          colvalue: 1,
+        const colOptions = reactive([{
+          colValue: 1,
           label: '数学与计算机科学学院'
         }, {
-          colvalue: 2,
+          colValue: 2,
           label: '电气工程与自动化学院'
         }, {
-          colvalue: 3,
+          colValue: 3,
           label: '环境与资源学院'
         }]);
         // 专业选项
-        const speoptions = reactive([{
-          spevalue: 1,
+        const speOptions = reactive([{
+          speValue: 1,
           label: '计算机技术'
         }, {
-          spevalue: 2,
+          speValue: 2,
           label: '软件工程'
         }, {
-          spevalue: 3,
+          speValue: 3,
           label: '数学系'
         }]);
         // 学年选项
-        const yearoptions = reactive([{
-          yearvalue: 1,
+        const yearOptions = reactive([{
+          yearValue: 1,
           label: '大一'
         }, {
-          yearvalue: 2,
+          yearValue: 2,
           label: '大二'
         }, {
-          yearvalue: 3,
+          yearValue: 3,
           label: '大三'
         }, {
-          yearvalue: 4,
+          yearValue: 4,
           label: '大四'
         }]);
-        const colvalue = ref('');
-        const spevalue = ref('');
-        const yearvalue = ref('');
+        const colValue = ref('');
+        const speValue = ref('');
+        const yearValue = ref('');
         const inputID = ref('');
         const inputName = ref('');
 
@@ -206,7 +216,7 @@ export default {
           sID: '523356236',
           sName: '王二哈',
           sCol: '电气工程与自动化学院',
-          sSpe: '计算机技术',
+          sSpe: '电气工程专业',
           sYear: '大二'
         }, 
         {
@@ -224,22 +234,34 @@ export default {
           sYear: '大一'
         }]);
 
+        /**
+         * 方法
+         */
         //点击跳转页面
         const handleCurrentChange = (val) => {
 
         }
 
+        const close = () => {
+          stuDia.value = false
+        }
+
         return {
-            handleCurrentChange,
-            yearoptions,
-            speoptions,
-            coloptions,
-            colvalue,
-            spevalue,
-            yearvalue,
-            inputID,
-            inputName,
-            tableData
+          // ref
+          colValue,
+          speValue,
+          yearValue,
+          inputID,
+          inputName,
+          // reactive
+          yearOptions,
+          speOptions,
+          colOptions,
+          tableData,
+          stuDia,
+          // methods
+          handleCurrentChange,
+          close
         }
     },
 }
@@ -262,9 +284,9 @@ export default {
   font-weight: bold;
 }
 .stuButton{
-  padding-left: 1404px;
+  padding-left: 1384px;
 }
 .pull-l {
-  padding-left: 52px;
+  padding-left: 1px;
 }
 </style>
