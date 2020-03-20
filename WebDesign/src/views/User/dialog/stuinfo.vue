@@ -1,5 +1,5 @@
 <template>
-    <el-dialog title="新增" :visible.sync="studialog_flag" @close="close" width="500px">
+    <el-dialog title="编辑" :visible.sync="studialog_flag" @close="close" width="500px">
         <el-form :model="form">
             <el-form-item label="学号：" :label-width="formLabelWidth" class="inputpadding">
             <el-input v-model="form.stuID" autocomplete="off" class="inputWidth"></el-input>
@@ -37,33 +37,13 @@
     </el-dialog>
 </template>
 <script>
+import {
+  reactive,
+  ref,
+  watch
+} from "@vue/composition-api";
 export default {
     name: 'stuDialogInfo',
-    data(){
-        return {
-            studialog_flag: false,
-            form: {
-                stuID: '',
-                stuname: '',
-                col: '',
-                spe: '',
-                year: '',
-                date1: '',
-                date2: '',
-                delivery: false,
-                type: [],
-                resource: '',
-                desc: ''
-                },
-            formLabelWidth: '70px'
-            }
-        },
-    methods: {
-        close(){
-            this.studialog_flag = false;
-            this.$emit('close', false);
-        }
-    },
     // 单向数据流从父级流向子级，不能反向修改
     props: {
         flag: {
@@ -71,11 +51,42 @@ export default {
             defult: false
         }
     },
-    watch: {
-        flag: {
-            handler(newValue, oldValue){
-                this.studialog_flag = newValue
-            }
+    setup(props, { emit }){ 
+        const studialog_flag = ref(false);
+        const formLabelWidth = ref('70px');
+        const form = reactive({
+            stuID: '',
+            stuname: '',
+            col: '',
+            spe: '',
+            year: '',
+            date1: '',
+            date2: '',
+            delivery: false,
+            type: [],
+            resource: '',
+            desc: ''
+        })
+
+        // watch
+        watch(() => {
+            studialog_flag.value = props.flag
+        })
+
+        // methods
+        const close = () => {
+            studialog_flag.value = false;
+            emit('close', false);
+        }
+
+        return {
+            // ref
+            studialog_flag,
+            formLabelWidth,
+            // reactive
+            form,
+            // methods
+            close
         }
     }
 }
