@@ -112,7 +112,7 @@
             label="操作">
             <template slot-scope="scope">
               <el-button type="primary" size="mini" @click="stuDia = true">编辑</el-button>
-              <el-button type="danger" size="mini">删除</el-button>
+              <el-button type="danger" size="mini" @click="deleteInfo">删除</el-button>
             </template>
           </el-table-column>
         </el-table>
@@ -120,7 +120,7 @@
         <!-- 底部分页-->
         <el-row>
           <el-col :span="14">
-            <el-button type="danger" size="medium">批量删除</el-button>
+            <el-button type="danger" size="medium" @click="deleteAll">批量删除</el-button>
           </el-col>
           <el-col :span="10" class="pull-l">
             <el-pagination
@@ -139,11 +139,12 @@
 </template>
 <script>
 import StuDialog from "./dialog/stuinfo.vue";
+
 import { reactive, ref } from '@vue/composition-api';
 export default {
     name: 'stuInfo',
     components: { StuDialog },
-    setup(props) {
+    setup(props, { root } ) {
         /**
          * 数据
          */
@@ -242,6 +243,26 @@ export default {
 
         }
 
+        const deleteInfo = () => {
+          root.confirm({
+            content: "将删除该信息, 是否继续?",
+            tip: "警告",
+            fn: confirmDelete
+          })
+        }
+
+        const deleteAll = () => {
+          root.confirm({
+            content: "将删除所选信息, 是否继续?",
+            tip: "警告",
+            fn: confirmDelete
+          })
+        }
+
+        const confirmDelete=() => {
+
+        }
+
         const close = () => {
           stuDia.value = false
         }
@@ -261,7 +282,9 @@ export default {
           stuDia,
           // methods
           handleCurrentChange,
-          close
+          close,
+          deleteInfo,
+          deleteAll
         }
     },
 }
