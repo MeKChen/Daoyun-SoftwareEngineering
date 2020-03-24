@@ -107,6 +107,46 @@ export default new Router({
           component: () => import("../views/Power/index.vue")
         }
       ]
+    },
+ 
+    /**
+     * 异常页面
+     */
+    {
+      path: "/abnormal",
+      name: "Abnormal",
+      redirect: "abnoraml_404",
+      meta: {
+        name: "异常页面",
+        icon: "el-icon-magic-stick"
+      },
+      component: Layout,
+      children: [
+        {
+          path: "/abnormal_404",
+          name: "Abnormal_404",
+          meta: {
+            name: "404"
+          },
+          component: () => import("../views/Abnormal/404.vue")
+        },
+        {
+          path: "/abnormal_403",
+          name: "Abnormal_403",
+          meta: {
+            name: "403"
+          },
+          component: () => import("../views/Abnormal/403.vue")
+        },
+        {
+          path: "/abnormal_500",
+          name: "Abnormal_500",
+          meta: {
+            name: "500"
+          },
+          component: () => import("../views/Abnormal/500.vue")
+        },
+      ]
     }
   ]
 });
