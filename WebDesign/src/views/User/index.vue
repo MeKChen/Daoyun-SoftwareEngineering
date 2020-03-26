@@ -139,7 +139,6 @@
 </template>
 <script>
 import StuDialog from "./dialog/stuinfo.vue";
-
 import { reactive, ref } from '@vue/composition-api';
 export default {
     name: 'stuInfo',
