@@ -68,7 +68,7 @@
                     </div>
                 </el-col>
 
-                <div  class="stuButton">
+                <div class="stuButton">
                     <el-button type="primary">搜索</el-button>
                     <el-button type="primary" @click="stuDia = true">新增</el-button>
                 </div>

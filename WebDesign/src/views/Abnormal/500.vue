@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="alert-img">
         <img src="@/img/500.png">
     </div>
 </template>
@@ -13,5 +13,8 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-
+.alert-img{
+    padding-top: 75px;
+    padding-left: 320px;
+}
 </style>
