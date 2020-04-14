@@ -21,7 +21,7 @@
                 </el-col>
 
                 <el-col :span="5">
-                    <div class="label-wrap stuName">
+                    <div class="label-wrap stuCol">
                         <label for="">学院：</label>
                         <div class="wrap-content">
                             <el-select v-model="colValue" placeholder="请选择" style="width: 100%">
@@ -37,7 +37,7 @@
                 </el-col>
 
                 <el-col :span="5">
-                    <div class="label-wrap stuName">
+                    <div class="label-wrap stuSpe">
                         <label for="">专业：</label>
                         <div class="wrap-content">
                             <el-select v-model="speValue" placeholder="请选择" style="width: 100%">
@@ -53,7 +53,7 @@
                 </el-col>
 
                 <el-col :span="3">
-                    <div class="label-wrap stuName">
+                    <div class="label-wrap stuYear">
                         <label for="">年级：</label>
                         <div class="wrap-content">
                             <el-select v-model="yearValue" placeholder="请选择" style="width: 100%">

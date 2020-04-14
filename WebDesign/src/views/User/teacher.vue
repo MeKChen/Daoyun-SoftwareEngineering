@@ -21,7 +21,7 @@
                 </el-col>
 
                 <el-col :span="5">
-                    <div class="label-wrap teaName">
+                    <div class="label-wrap teaCol">
                         <label for="">学院：</label>
                         <div class="wrap-content">
                             <el-select v-model="colValue" placeholder="请选择" style="width: 100%">
@@ -210,9 +210,7 @@ export default {
 .label-wrap {
   &.teaID { @include labelDom(right, 60, 40); }
   &.teaName { @include labelDom(right, 60, 40); }
-  &.stuCol { @include labelDom(right, 60, 40); }
-  &.stuSpe { @include labelDom(right, 60, 40); }
-  &.stuYear { @include labelDom(right, 60, 40); }
+  &.teaCol { @include labelDom(right, 60, 40); }
 }
 .teaInf {
   padding-top: 30px;
