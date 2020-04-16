@@ -112,27 +112,33 @@
             </el-table-column>
             <el-table-column
                 prop="sID"
-                label="学号">
+                label="学号"
+                width="100">
             </el-table-column>
             <el-table-column
                 prop="sName"
-                label="姓名">
+                label="姓名"
+                width="100">
             </el-table-column>
             <el-table-column
                 prop="sCourse"
-                label="课程名">
+                label="课程名"
+                width="200">
             </el-table-column>
             <el-table-column
                 prop="tName"
-                label="授课教师">
+                label="授课教师"
+                width="100">
             </el-table-column>
             <el-table-column
                 prop="sCol"
-                label="学院">
+                label="学院"
+                width="200">
             </el-table-column>
             <el-table-column
                 prop="sSpe"
-                label="专业">
+                label="专业"
+                width="200">
             </el-table-column>
             <el-table-column
                 prop="attendTime"
@@ -140,11 +146,13 @@
             </el-table-column>
             <el-table-column
                 prop="attendPlace"
-                label="签到地点">
+                label="签到地点"
+                width="100">
             </el-table-column>
             <el-table-column
                 prop="attendStatus"
-                label="签到状态">
+                label="签到状态"
+                width="100">
             </el-table-column>
             <el-table-column
                 label="操作">
@@ -211,6 +219,42 @@ export default {
         const speValue = ref('');
         const attValue = ref('');
 
+        const tableData = reactive([{
+          sID: '190352346',
+          sName: '吴所长',
+          sCourse: '计算机图像处理',
+          tName: '陈志杰',
+          sCol: '数学与计算机科学学院',
+          sSpe: '计算机技术',
+          attendTime: '2020-04-15 8:20',
+          attendPlace: '东3-204',
+          attendStatus: '已签到'
+        }]);
+
+        const handleCurrentChange = (val) => {
+
+        }
+
+        const deleteInfo = () => {
+          root.confirm({
+            content: "将删除该信息, 是否继续?",
+            tip: "警告",
+            fn: confirmDelete
+          })
+        }
+
+        const deleteAll = () => {
+          root.confirm({
+            content: "将删除所选信息, 是否继续?",
+            tip: "警告",
+            fn: confirmDelete
+          })
+        }
+
+        const confirmDelete=() => {
+
+        }
+
         return {
             // ref
             colValue,
@@ -219,7 +263,11 @@ export default {
             // reactive
             colOptions,
             speOptions,
-            attOptions
+            attOptions,
+            tableData,
+            // methods
+            deleteInfo,
+            deleteAll
         }
     }
 }
