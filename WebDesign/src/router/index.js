@@ -147,6 +147,29 @@ export default new Router({
           component: () => import("../views/Abnormal/500.vue")
         },
       ]
-    }
+    },
+    /**
+     * 数据字典
+     */
+    {
+      path: "/data_dictionary",
+      name: "Data_dictionary",
+      redirect: "data_dict",
+      meta: {
+        name: "数据字典",
+        icon: "el-icon-user"
+      },
+      component: Layout,
+      children: [
+        {
+          path: "/data_dict",
+          name: "Data_dict",
+          meta: {
+            name: "数据字典"
+          },
+          component: () => import("../views/Data_dict/index.vue")
+        },
+      ]
+    },
   ]
 });
