@@ -28,7 +28,7 @@ public class JWTUtils {
     /**
      * 密钥
      */
-    private static final byte[] SECRET = "ZhuangJinhuiZhuangzhenZhuWeidaHelingLiuyoyu".getBytes();
+    private static final byte[] SECRET = "gongchengshixunyunbanke".getBytes();
     /**
      * 初始化head部分的数据
      * {
