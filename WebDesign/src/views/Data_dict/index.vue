@@ -50,7 +50,7 @@
             label="操作">
             <template slot-scope="scope">
               <el-button type="primary" size="mini" @click="dataDia = true">编辑</el-button>
-              <el-button type="danger" size="mini" @click="deleteInfo">删除</el-button>
+              <el-button type="danger" size="mini" v-if="!scope.row.editing"  @click="handleDelete(scope.$index, scope.row)">删除</el-button>
             </template>
           </el-table-column>
         </el-table>
@@ -87,44 +87,8 @@ export default {
          */
         const dataDia = ref(false);
         // 学院选项
-        const colOptions = reactive([{
-          colValue: 1,
-          label: '数学与计算机科学学院'
-        }, {
-          colValue: 2,
-          label: '电气工程与自动化学院'
-        }, {
-          colValue: 3,
-          label: '环境与资源学院'
-        }]);
-        // 专业选项
-        const speOptions = reactive([{
-          speValue: 1,
-          label: '计算机技术'
-        }, {
-          speValue: 2,
-          label: '软件工程'
-        }, {
-          speValue: 3,
-          label: '数学系'
-        }]);
-        // 学年选项
-        const yearOptions = reactive([{
-          yearValue: 1,
-          label: '大一'
-        }, {
-          yearValue: 2,
-          label: '大二'
-        }, {
-          yearValue: 3,
-          label: '大三'
-        }, {
-          yearValue: 4,
-          label: '大四'
-        }]);
-        const colValue = ref('');
-        const speValue = ref('');
-        const yearValue = ref('');
+       
+        
         const inputID = ref('');
         const inputName = ref('');
 
@@ -186,7 +150,7 @@ export default {
         }
 
         const confirmDelete=() => {
-
+          handleDelete
         }
 
         const close = () => {
@@ -195,15 +159,11 @@ export default {
 
         return {
           // ref
-          colValue,
-          speValue,
-          yearValue,
+      
           inputID,
           inputName,
           // reactive
-          yearOptions,
-          speOptions,
-          colOptions,
+
           tableData,
           dataDia,
           // methods
@@ -227,8 +187,14 @@ export default {
           })
         }
         return this.tableData
-      }
+      },
+
     },
+    methods: {
+      handleDelete(index, row){ //删除行
+        this.tableData.splice(index, 1)
+      },
+    }
 }
 </script>
 <style lang="scss" scoped>
