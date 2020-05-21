@@ -25,7 +25,8 @@ service.interceptors.response.use(
   function(response) {
     // 对响应数据做点什么
     let data = response.data;
-    if (data.resCode !== 0) {
+    //if (data.resCode !== 0) {
+      if (data.status !== 0) {
       Message.error(data.message);
       return Promise.reject(data);
     } else {

@@ -25,11 +25,66 @@ export default new Router({
       component: () => import("../views/Login/index.vue")
     },
     /**
-     * 用户信息
+     * 系统控制
      */
     {
       path: "/console",
       name: "Console",
+      redirect: "userManage",
+      meta: {
+        name: "系统管理",
+        icon: "el-icon-setting"
+      },
+      component: Layout,
+      children: [
+        {
+          path: "/userManage",
+          name: "UserManage",
+          meta: {
+            name: "用户管理"
+          },
+          component: () => import("../views/System/index.vue")
+        },
+        {
+          path: "/menuManage",
+          name: "MenuManage",
+          meta: {
+            name: "菜单管理"
+          },
+          component: () => import("../views/System/menu.vue")
+        },
+        {
+          path: "/roleManage",
+          name: "RoleManage",
+          meta: {
+            name: "角色管理"
+          },
+          component: () => import("../views/System/role.vue")
+        },
+        {
+          path: "/systemPara",
+          name: "SystemPara",
+          meta: {
+            name: "系统参数"
+          },
+          component: () => import("../views/System/para.vue")
+        },
+        {
+          path: "/fabric",
+          name: "Fabric",
+          meta: {
+            name: "学校组织结构"
+          },
+          component: () => import("../views/System/fabric.vue")
+        }
+      ]
+    },
+    /**
+     * 用户信息
+     */
+    {
+      path: "/userInfo",
+      name: "UserInfo",
       redirect: "stuIndex",
       meta: {
         name: "用户信息",

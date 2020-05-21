@@ -21,12 +21,12 @@
         class="login-form"
         size="medium"
       >
-        <el-form-item prop="username" class="item-from">
-          <label for="username">邮箱</label>
+        <el-form-item prop="account" class="item-from">
+          <label for="account">用户名</label>
           <el-input
-            id="username"
+            id="account"
             type="text"
-            v-model="ruleForm.username"
+            v-model="ruleForm.account"
             autocomplete="off"
           ></el-input>
         </el-form-item>
@@ -58,7 +58,7 @@
           ></el-input>
         </el-form-item>
 
-        <el-form-item prop="code" class="item-from">
+        <el-form-item prop="code" class="item-from" v-show="model === 'register'">
           <label>验证码</label>
           <el-row :gutter="10">
             <el-col :span="15">
@@ -112,14 +112,15 @@ import {
 } from "@/utils/validate";
 export default {
   name: "login",
+  
   setup(props, { refs, root }) {
     // 验证用户名
     let validateUsername = (rule, value, callback) => {
       if (value === "") {
         callback(new Error("请输入用户名"));
-      } else if (validateEmail(value)) {
+      } /* else if (validateEmail(value)) {
         callback(new Error("用户名格式有误"));
-      } else {
+      } */ else {
         callback(); //true
       }
     };
@@ -130,9 +131,9 @@ export default {
       value = ruleForm.password;
       if (value === "") {
         callback(new Error("请输入密码"));
-      } else if (validatePass(value)) {
+      } /* else if (validatePass(value)) {
         callback(new Error("密码为6至20位的数字和字母组成"));
-      } else {
+      } */ else {
         callback();
       }
     };
@@ -171,7 +172,7 @@ export default {
     // 模块值
     const model = ref("login");
     // 登录按钮禁用状态
-    const loginButtonStatus = ref(true);
+    const loginButtonStatus = ref(false);
     // 验证码按钮状态
     const codeButtonStatus = reactive({
       status: false,
@@ -181,15 +182,15 @@ export default {
     const timer = ref(null);
     // 表单绑定数据
     const ruleForm = reactive({
-      username: "",
+      account: "",
       password: "",
       passwords: "",
       code: ""
     });
     // 表单的验证
     const rules = reactive({
-      username: [{ validator: validateUsername, trigger: "blur" }],
-      password: [{ validator: validatePassword, trigger: "blur" }],
+      //account: [{ validator: validateUsername, trigger: "blur" }],
+      //password: [{ validator: validatePassword, trigger: "blur" }],
       passwords: [{ validator: validatePasswords, trigger: "blur" }],
       code: [{ validator: validateCode, trigger: "blur" }]
     });
@@ -220,17 +221,17 @@ export default {
     };
     const getSms = () => {
       // 进行提示
-      if (ruleForm.username == "") {
+      if (ruleForm.account == "") {
         root.$message.error("邮箱不能为空！！");
         return false;
       }
-      if (validateEmail(ruleForm.username)) {
+      if (validateEmail(ruleForm.account)) {
         root.$message.error("邮箱格式有误，请重新输入！！");
         return false;
       }
       // 获取验证码
       let requestData = {
-        username: ruleForm.username,
+        account: ruleForm.account,
         module: model.value
       };
       // 修改获取验证按钮状态
@@ -247,7 +248,7 @@ export default {
             type: "success"
           });*/
           // 启用登录或注册按钮
-          loginButtonStatus.value = false;
+          loginButtonStatus.value = true;
           // 设定倒计时
           countDown(60);
         })
@@ -259,29 +260,45 @@ export default {
      * 提交表单
      */
     const submitForm = formName => {
-      refs[formName].validate(valid => {
+       model.value === "login" ? login() : register();
+      /* refs[formName].validate(valid => {
         // 表单验证通过
         if (valid) {
           // 三元运算
           model.value === "login" ? login() : register();
+
         } else {
           console.log("error submit!!");
           return false;
-        }
-      });
+        } 
+      }); */
     };
     /**
      * 登录
      */
     const login = () => {
-      let requestData = {
-        username: ruleForm.username,
-        password: sha1(ruleForm.password),
-        code: ruleForm.code
-      };
+       let requestData = {
+        account: ruleForm.account,
+        //password: sha1(ruleForm.password),
+        password: ruleForm.password
+      }
+      //let account = ruleForm.account;
+      //let password = ruleForm.password;
+      /* root.$store.dispatch('app/login', requestData).then(response => {
+        Login(requestData).then(response => {
+          console.log('登陆成功')
+          console.log(response)
+          root.$router.push({
+            name: 'Console'
+          })
+        }).catch(error => {});
+      })} */
+      
       Login(requestData).then(response => {
+        console.log('登陆成功')
+        console.log(response)
         root.$router.push({
-          name: 'Attendance'
+          name: 'Console'
         })
       }).catch(error => {})
       /*root.$store
@@ -293,13 +310,13 @@ export default {
           });
         })
         .catch(error => {});*/
-    };
+    
     /**
      * 注册
      */
     const register = () => {
       let requestData = {
-        username: ruleForm.username,
+        account: ruleForm.account,
         password: sha1(ruleForm.password),
         code: ruleForm.code,
         module: "register"
@@ -359,7 +376,8 @@ export default {
      * 生命周期
      */
     // 挂载完成后
-    onMounted(() => {});
+    onMounted(() => {
+    });
 
     return {
       menuTab,
