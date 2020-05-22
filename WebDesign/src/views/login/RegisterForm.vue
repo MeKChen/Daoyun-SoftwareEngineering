@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="login_name">
-            <p>签到Star注册</p>
+            <p>到云注册</p>
         </div>
         <el-form class="login-form" autoComplete="on" ref="registerForm" :model="registerForm" :rules="registerFormRules">
             <el-form-item prop="account">
@@ -53,7 +53,7 @@
                     </div>
                 </el-input>
             </el-form-item>
-            <el-button type="primary" style="width:100%;" @click="submitRegister">
+            <el-button type="danger" style="width:100%;" @click="submitRegister">
                 确认注册
             </el-button>
         </el-form>
