@@ -1,9 +1,9 @@
 <template>
     <div class="body">
         <div class="login_box">
-            <div class="login_l_img"><img src="@/assets/login-background.png"></div>
+            
             <div class="login">
-                <div class="login_logo"><a href="#"><img src="@/assets/logo.png"></a></div>
+                <div class="login_logo"><a href="#"><img src="@/assets/logo.jpg"></a></div>
 
                 <!--登录-->
                 <!--<transition name="fade" mode="out-in">-->
@@ -91,8 +91,9 @@
         border-radius: 6px;
         box-sizing: border-box;
         float: right;
-        position: relative;
-        margin-top: 50px;
+        position: absolute;
+        margin-top: 10px;
+        margin-left: 360px;
     }
     .login_logo {
         width: 120px;
@@ -104,7 +105,7 @@
         line-height: 110px;
         position: absolute;
         top: -60px;
-        right: 140px;
+        left: -30px;
     }
     .login_name {
         width: 100%;
