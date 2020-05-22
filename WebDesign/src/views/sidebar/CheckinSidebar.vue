@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="sidebar-info">
-            <img src="@/assets/sidebar-logo.png" :height="isCollapse ? '15' : '30'">
+            <!-- <img src="@/assets/sidebar-logo.png" :height="isCollapse ? '15' : '30'"> -->
         </div>
         <el-menu
              mode="vertical"
