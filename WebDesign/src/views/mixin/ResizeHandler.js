@@ -13,7 +13,7 @@ export default {
       }
     }
   },
-  beforeMount () {
+  beforeMount () { 
     window.addEventListener('resize', this.resizeHandler)
   },
   mounted () {

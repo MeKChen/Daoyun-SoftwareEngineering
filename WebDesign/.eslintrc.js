@@ -21,7 +21,7 @@ module.exports = {
         'vue/no-side-effects-in-computed-properties':'off',
         indent:'off',
         yoda:'off',
-        semi:'off',
+        semi:'off', 
         'object-curly-spacing':'off'
     },
     parserOptions: {

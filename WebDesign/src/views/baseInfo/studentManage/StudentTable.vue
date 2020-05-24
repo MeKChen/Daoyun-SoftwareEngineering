@@ -15,7 +15,7 @@
         <el-table-column prop="courseTime" label="上课时间" align="center"></el-table-column>
         <el-table-column prop="courseLocation" label="上课地点" align="center"></el-table-column>
     </el-table>
-    </div>
+    </div> 
 </template>
 
 <script>

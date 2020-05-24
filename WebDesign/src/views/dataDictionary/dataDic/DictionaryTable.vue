@@ -12,7 +12,7 @@
             <el-table-column prop="dataValue" label="参数名称" align="center" sortable></el-table-column>
             <el-table-column prop="dataKey" label="参数key" align="center" ></el-table-column>
             <el-table-column prop="dataTypeKey"
-                             label="参数类型"
+                             label="参数类型" 
                              align="center"
                              :filters="[{ text: '系统数据', value: 'System' }, { text: '标准参数', value: 'Standard' }]"
                              :filter-method="filterTag"

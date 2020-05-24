@@ -14,7 +14,7 @@
             </el-form-item>
             <el-form-item prop="password">
                 <el-input name="password" type="text"
-                          v-model="loginForm.password"
+                          v-model="loginForm.password" 
                           placeholder="请输入密码"
                           show-password
                           @keyup.enter.native="handleLogin">

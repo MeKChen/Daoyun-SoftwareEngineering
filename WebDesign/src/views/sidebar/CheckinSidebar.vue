@@ -16,7 +16,7 @@
                 <!--有二级菜单-->
                 <el-submenu v-if="!item.hidden && countChildNum(item) > 1 " :index="item.path" :key="item.path" >
                     <!--一级菜单的内容-->
-                    <template slot="title">
+                    <template slot="title"> 
                         <icon :name="item.meta.icon" :w="16" :h="16"></icon>
                         <span>{{item.meta.title}}</span>
                     </template>

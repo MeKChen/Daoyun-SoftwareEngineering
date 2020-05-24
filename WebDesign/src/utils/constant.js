@@ -16,3 +16,4 @@ export default {
   ERROR_CODE_NETWORK_ERROR, // 网络错误
   REQUEST_HEADER_TOKEN_KEY
 }
+ 

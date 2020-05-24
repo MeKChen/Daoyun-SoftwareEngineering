@@ -10,7 +10,7 @@ const userLoginAPI = {
         }
         return request({
             //url: '/loginCheck',
-            url: this.base_url + 'signup',
+            url: this.base_url + 'signup', 
             method: 'post',
             params: data
         })

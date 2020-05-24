@@ -14,7 +14,7 @@
                              type="index"
                              width="50">
             </el-table-column>
-            <el-table-column align="center"
+            <el-table-column align="center" 
                              prop="userType"
                              label="角色类型">
             </el-table-column>

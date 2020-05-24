@@ -13,7 +13,7 @@ Router.prototype.push = function push(location, onResolve, onReject) {
 
 const defaultRoute = [
     {
-        path: '/login',
+        path: '/login', 
         name: 'login',
         component: () => import('./views/login/Login.vue'),
         hidden: true,

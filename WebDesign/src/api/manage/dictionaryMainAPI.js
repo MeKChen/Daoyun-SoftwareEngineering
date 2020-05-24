@@ -17,7 +17,7 @@ const dictionaryMainAPI = {
                 id: data.id,
                 DataTypeKey: data.dataTypeKey,
                 DataKey: data.dataKey,
-                DataValue: data.dataValue,
+                DataValue: data.dataValue, 
                 DataDesc: data.dataDesc
             }
         });

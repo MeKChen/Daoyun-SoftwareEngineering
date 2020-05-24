@@ -9,7 +9,7 @@
                 :rules="rules"
                 v-loading="showLoading"
                 label-width="100px"
-                label-position="right"
+                label-position="right" 
                 @keyup.enter.native="addSubmit">
             <el-row :gutter="20">
                 <el-col :md="12" :sm="24">

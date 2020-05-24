@@ -15,7 +15,7 @@
                 <!--<transition name="fade" mode="out-in">-->
                 <register-form v-show="form=='register'" :show-login="showLogin"></register-form>
                 <!--</transition>-->
-
+ 
                 <!--忘记密码-->
                 <!--<transition name="fade" mode="out-in">-->
                 <forget-form v-show="form=='forget'" :show-login="showLogin"></forget-form>

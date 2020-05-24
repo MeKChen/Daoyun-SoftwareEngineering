@@ -16,7 +16,7 @@
         v-for="item in optionList"
         :key="item.value"
         :label="item.label"
-        :value="item.value"
+        :value="item.value" 
         :disabled="item.disabled">
         <span style="float: left">{{ item.label }}</span>
         <span style="float: right; color: #8492a6; font-size: 13px">{{ item.remark }}</span>

@@ -17,7 +17,7 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'Pagination',
   data () {
-    return {
+    return { 
       pageSizeList: this.$store.state.app.default.pageSizeList
     }
   },

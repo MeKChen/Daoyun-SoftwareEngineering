@@ -13,7 +13,7 @@ const NOT_LOGIN = constant.ERROR_CODE_NOT_LOGIN;
 const NOT_PERMISSION = constant.ERROR_CODE_NOT_PERMISSION;
 
 service.interceptors.request.use(config => {
-    config.headers[constant.REQUEST_HEADER_TOKEN_KEY] = getToken();
+    config.headers[constant.REQUEST_HEADER_TOKEN_KEY] = getToken(); 
     return config;
 }, error => {
     console.log(error);

@@ -118,7 +118,7 @@
                     ]
                 }
             }
-        },
+        }, 
         methods: {
             async sendEmailCode (e) {
                 let flag = await this.validateCode().then(() => {

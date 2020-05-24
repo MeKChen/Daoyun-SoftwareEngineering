@@ -10,7 +10,7 @@
     </div>
   </el-row>
 </template>
-
+ 
 <script>
 export default {
   name: 'CardTitle',

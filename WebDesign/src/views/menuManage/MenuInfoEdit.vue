@@ -14,7 +14,7 @@
                     <!--删除-->
                     <el-button v-if="editStatus!=='create' && menuData.menuURL!==''" type="danger" icon="el-icon-delete" circle @click="remove" size="mini"></el-button>
                 </el-row>
-            </card-title>
+            </card-title> 
         </div>
         <el-form size="small"
                  :rules="rules"

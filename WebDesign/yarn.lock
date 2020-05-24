@@ -13,7 +13,7 @@
   version "7.4.0"
   resolved "http://registry.npm.taobao.org/@babel/core/download/@babel/core-7.4.0.tgz#248fd6874b7d755010bfe61f557461d4f446d9e9"
   integrity sha1-JI/Wh0t9dVAQv+YfVXRh1PRG2ek=
-  dependencies:
+  dependencies: 
     "@babel/code-frame" "^7.0.0"
     "@babel/generator" "^7.4.0"
     "@babel/helpers" "^7.4.0"

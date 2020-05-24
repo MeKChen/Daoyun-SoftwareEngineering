@@ -10,7 +10,7 @@
                 </el-col>
                 <el-col :md="12" :sm="24">
                     <el-form-item label="课程名:" prop="courseName">
-                        {{studentData.courseName}}
+                        {{studentData.courseName}} 
                     </el-form-item>
                 </el-col>
 

@@ -14,7 +14,7 @@ const systemApi = {
     return dataFormat.toInt(t);
   },
   // 获取数据
-  getValue: function (name, defaultValue) {
+  getValue: function (name, defaultValue) { 
     let t = storage.getItem(PREFIX + name);
     return dataFormat.isNull(t) ? defaultValue : t;
   },

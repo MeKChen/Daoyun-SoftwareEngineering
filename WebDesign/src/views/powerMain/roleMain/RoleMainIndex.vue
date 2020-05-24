@@ -18,7 +18,7 @@
                     <el-col :md="12" :sm="24">
                         <role-menu-edit :role-id="roleID" :role-name="roleName"></role-menu-edit>
                     </el-col>
-                </el-row>
+                </el-row> 
             </simple-card>
         </el-row>
     </div>

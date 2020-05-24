@@ -13,7 +13,7 @@
         <el-table-column prop="userName" label="用户名" align="center" width="120"></el-table-column>
         <el-table-column prop="status"  width="120"
                          label="状态"
-                         align="center"
+                         align="center" 
                          :filters="userStatusMap"
                          :filter-method="filterTag"
                          filter-placement="bottom-end">

@@ -16,7 +16,7 @@
                         <router-view/>
                     </transition>
                 </el-main>
-                <el-footer class="app-footer">Copyright © 2018 Build By 第13小组</el-footer>
+                <el-footer class="app-footer">第13小组</el-footer>
             </el-container>
         </el-container>
     </div>
@@ -40,7 +40,7 @@
         },
         data () {
             return {
-                username: '庄金惠'
+                username: '陈非易'
             }
         },
         methods: {

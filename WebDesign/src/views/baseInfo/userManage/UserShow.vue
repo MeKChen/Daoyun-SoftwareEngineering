@@ -13,7 +13,7 @@
                 <el-col :md="12" :sm="24">
                     <el-form-item label="账号:" prop="account">
                         {{userData.account}}
-                    </el-form-item>
+                    </el-form-item> 
                 </el-col>
                 <el-col :md="12" :sm="24">
                     <el-form-item label="用户名:" prop="userName">

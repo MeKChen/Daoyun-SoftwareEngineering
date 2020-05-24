@@ -19,3 +19,4 @@ export default function handleClipboard (text, event) {
   })
   clipboard.onClick(event)
 }
+ 
