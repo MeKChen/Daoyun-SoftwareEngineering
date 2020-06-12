@@ -75,7 +75,7 @@
                         this.loading = true;
                         this.$store.dispatch('LoginByAccount', this.loginForm).then(() => {
                             this.loading = false;
-                            this.$router.push({path: '/home'})
+                            this.$router.push({path: '/userManage/index'})
                         }).finally(() => {
                             this.loading = false;
                         })

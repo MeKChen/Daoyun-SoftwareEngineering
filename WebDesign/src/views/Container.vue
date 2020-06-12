@@ -23,7 +23,6 @@
 </template>
 
 <script>
-    // @ is an alias to /src
     import CheckinSidebar from './sidebar/CheckinSidebar';
     import CheckinNavbar from './sidebar/CheckinNavbar'
 
