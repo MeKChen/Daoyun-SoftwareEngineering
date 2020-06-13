@@ -13,6 +13,6 @@ const utilsMainAPI = {
             }
         });
     }
-}
+} 
 
 export default utilsMainAPI

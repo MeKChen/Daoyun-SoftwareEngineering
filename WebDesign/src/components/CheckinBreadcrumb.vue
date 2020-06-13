@@ -20,7 +20,7 @@
 
 <script>
     // import {generateTitle} from '@/utils/i18n'
-
+ 
     export default {
         name: 'CheckinBreadcrumb',
         data () {

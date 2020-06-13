@@ -14,7 +14,7 @@
                 </el-form-item>
                 <el-form-item>
                     <el-button type="primary" icon="el-icon-search" @click="query">查询</el-button>
-                    <el-button @click="resetForm('courseSearchForm')">重置</el-button>
+                    <el-button @click="resetForm('courseSearchForm')">重置</el-button> 
                 </el-form-item>
             </el-form>
         </container-search-group>

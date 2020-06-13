@@ -13,7 +13,7 @@ const messageUtils = {
   showError,
   alert,
   showSimpleConfirm,
-  startLoading,
+  startLoading, 
   endLoading
 };
 

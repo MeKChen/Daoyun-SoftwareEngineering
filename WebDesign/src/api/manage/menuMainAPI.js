@@ -15,7 +15,7 @@ const menuMainAPI = {
     // 根据菜单代码获取菜单信息
     getMenuByKey: function (id) {
         return request({
-            url: this.base_url + 'MenuInfo',
+            url: this.base_url + 'MenuInfo', 
             method: 'get',
             params: {
                 menuValue: id

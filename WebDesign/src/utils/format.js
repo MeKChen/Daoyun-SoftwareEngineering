@@ -19,7 +19,7 @@ const formatUtils = {
         if (typeof time === 'object') {
             date = time;
         } else {
-            if (('' + time).length === 10) {
+            if (('' + time).length === 10) { 
                 time = parseInt(time) * 1000;
             }
             date = new Date(time);

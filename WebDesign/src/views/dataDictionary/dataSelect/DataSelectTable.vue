@@ -16,7 +16,7 @@
                          align="center"
                          :filters="[{ text: '正常', value: 'Normal' }, { text: '禁用', value: 'Disabled' }]"
                          :filter-method="filterTag"
-                         filter-placement="bottom-end">
+                         filter-placement="bottom-end"> 
             <template slot-scope="scope">
                 <el-tag
                         :type="scope.row.status === 'Disabled' ? 'danger' : 'success'"

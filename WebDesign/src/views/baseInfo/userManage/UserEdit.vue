@@ -13,7 +13,7 @@
                 @keyup.enter.native="editSubmit">
             <el-row :gutter="20">
                 <el-col :md="12" :sm="24">
-                    <el-form-item label="账号:" prop="account">
+                    <el-form-item label="账号:" prop="account"> 
                         {{userData.account}}
                         <!--<el-input name="account" v-model="userData.account"></el-input>-->
                     </el-form-item>

@@ -8,7 +8,7 @@
                 size="small"
                 :rules="rules"
                 v-loading="showLoading"
-                label-width="100px"
+                label-width="100px" 
                 label-position="right"
                 @keyup.enter.native="editSubmit">
             <el-row :gutter="20">

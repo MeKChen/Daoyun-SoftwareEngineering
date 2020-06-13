@@ -13,7 +13,7 @@
                        size="mini"></el-button>
         </div>
         <el-form size="small"
-                 :rules="rules"
+                 :rules="rules" 
                  :model="roleData"
                  ref="roleForm"
                  v-loading="submitLoading"

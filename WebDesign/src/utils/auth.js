@@ -4,7 +4,7 @@ const TokenKey = 'User-Token'
 const ExpireTime = 'ExpireTime'
 
 const authUtils = {
-  getToken,
+  getToken, 
   setToken,
   removeToken,
   getExpiredTime,

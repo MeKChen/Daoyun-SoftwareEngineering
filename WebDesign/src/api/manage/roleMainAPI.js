@@ -14,7 +14,7 @@ const roleMainAPI = {
     getById: function (id) {
         console.log(id);
         return request({
-            url: this.base_url + 'roleInfo',
+            url: this.base_url + 'roleInfo', 
             method: 'get',
             params: {
                 roleId: id

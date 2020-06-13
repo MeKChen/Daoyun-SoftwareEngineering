@@ -13,7 +13,7 @@
                                    :key="item.id"
                                    :label="item.data_value"
                                    :value="item.id"
-                                   placeholder="请选择">
+                                   placeholder="请选择"> 
                         </el-option>
                     </el-select>
                 </el-form-item>

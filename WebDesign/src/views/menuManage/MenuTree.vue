@@ -16,7 +16,7 @@
         name: 'MenuTree',
         data () {
             return {
-                treeData: [],
+                treeData: [], 
                 loading: false
             }
         },

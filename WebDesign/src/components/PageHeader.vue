@@ -17,7 +17,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: ''
+      default: '' 
     },
     showBack: {
       type: Boolean,

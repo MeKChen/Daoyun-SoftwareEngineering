@@ -15,7 +15,7 @@
                 <el-input name="userName" type="text" v-model="registerForm.userName" placeholder="请输入用户名">
                     <div class="svg-container" slot="prefix">
                         <icon name="username" :w="16" :h="16"></icon>
-                    </div>
+                    </div> 
                 </el-input>
             </el-form-item>
             <el-form-item prop="email">

@@ -17,7 +17,7 @@
                         <el-input name="account" v-model="userData.account"></el-input>
                     </el-form-item>
                 </el-col>
-                <el-col :md="12" :sm="24">
+                <el-col :md="12" :sm="24"> 
                     <el-form-item label="用户名:" prop="userName">
                         <el-input v-model="userData.userName"></el-input>
                     </el-form-item>

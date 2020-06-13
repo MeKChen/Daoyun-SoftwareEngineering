@@ -9,7 +9,7 @@
         name: 'CourseIndex'
     }
 </script>
-
+ 
 <style scoped>
 
 </style>

@@ -14,7 +14,7 @@
             <el-row :gutter="20">
                 <!--<el-col :md="12" :sm="24">-->
                     <!--<el-form-item label="字典名称:" prop="dataValue">-->
-                        <!--{{dataSelData.dictionary.dataValue}}-->
+                        <!--{{dataSelData.dictionary.dataValue}}--> 
                     <!--</el-form-item>-->
                 <!--</el-col>-->
                 <!--<el-col :md="12" :sm="24">-->

@@ -18,7 +18,7 @@
     props: {
       handleNodeClick: {
         type: Function,
-        default: function (node) {
+        default: function (node) { 
           console.log(node);
         }
       }

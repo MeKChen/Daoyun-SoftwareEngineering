@@ -16,7 +16,7 @@ const app = {
         TOGGLE_SIDEBAR: state => {
             state.sidebar.isCollapse = !state.sidebar.isCollapse;
             // console.log(  state.sidebar.isCollapse )
-        },
+        }, 
         MERGE_DEFAULT_DATA: (state, data) => {
             if (dataFormat.isNull(data)) return;
             let res = dataFormat.objectMerge(state.default, data, true);

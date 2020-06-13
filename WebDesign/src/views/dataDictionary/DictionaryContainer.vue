@@ -17,8 +17,8 @@
     import DictionaryIndex from './dataDic/DictionaryIndex';
     import DataSelectIndex from './dataSelect/DataSelectIndex';
     export default {
-        name: 'DictionaryContainer',
-        components: {DataSelectIndex, DictionaryIndex, PageHeader},
+        name: 'DictionaryContainer', 
+        components: {DataSelectIndex, DictionaryIndex, PageHeader}, 
         data () {
             return {
                 activeName: 'first'

@@ -13,7 +13,7 @@
             <menu-role-table ref="menuRoleTable" :menu-id="menuId" v-show="menuRoleVisible"></menu-role-table>
         </simple-card>
     </el-row>
-</template>
+</template> 
 
 <script>
     import SimpleCard from '../../components/Card/SimpleCard';

@@ -8,7 +8,7 @@
     <slot></slot>
   </el-card>
 </template>
-
+ 
 <script>
 
   import CardTitle from './CardTitle';

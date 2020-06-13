@@ -17,7 +17,7 @@ const dataUtils = {
       if (this.isNull(tmpD)) {
         return defaultValue;
       }
-    }
+    } 
     return tmpD;
   }, // 获取对象数据 key 层次用.隔开 例如: exact.children
   setObjectValue: function (obj, key, value) {

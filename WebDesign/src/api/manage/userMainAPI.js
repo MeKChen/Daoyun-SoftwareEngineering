@@ -12,7 +12,7 @@ const userMainAPI = {
     },
     addUser: function (data) {
         return request({
-            url: this.base_url + 'userInfo',
+            url: this.base_url + 'userInfo', 
             method: 'post',
             params: data
         });

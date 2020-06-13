@@ -17,7 +17,7 @@ function Decrypt (word) {
   let decryptedStr = decrypt.toString(CryptoJS.enc.Utf8);
   return decryptedStr.toString();
 }
-
+ 
 // 加密方法
 function Encrypt (word) {
   let srcs = CryptoJS.enc.Utf8.parse(word);

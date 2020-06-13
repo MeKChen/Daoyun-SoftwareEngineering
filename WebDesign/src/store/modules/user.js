@@ -9,7 +9,7 @@ const user = {
         account: '',
         token: '',
         sex: '',
-        email: ''
+        email: '' 
     },
 
     mutations: {

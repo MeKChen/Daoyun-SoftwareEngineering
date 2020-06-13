@@ -18,7 +18,7 @@
         </el-tree>
     </simple-card>
 </template>
-
+ 
 <script>
     import menuMainAPI from '@/api/manage/menuMainAPI'
     import dictionaryMainAPI from '@/api/manage/dictionaryMainAPI';
