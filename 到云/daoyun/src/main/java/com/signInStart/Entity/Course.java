@@ -1,20 +1,24 @@
 package com.signInStart.Entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "course", schema = "dbo", catalog = "et")
 public class Course implements Serializable {
     @Id
-    @Column(nullable = false)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long courseId;
 
     @Column()
-    private String name; //课程名称
+    private String courseName; //课程名称
 
     @Column()
     private String location; //上课地点
@@ -25,6 +29,22 @@ public class Course implements Serializable {
     @Column()
     private String endWeek; //终止周
 
+    public Double getLng() {
+        return lng;
+    }
+
+    public void setLng(Double lng) {
+        this.lng = lng;
+    }
+
+    public Double getLat() {
+        return lat;
+    }
+
+    public void setLat(Double lat) {
+        this.lat = lat;
+    }
+
     @Column()
     private String startSection; //起始节
 
@@ -33,6 +53,15 @@ public class Course implements Serializable {
 
     @Column()
     private String semester; //学期
+
+    @Column()
+    private Integer status; //签到状态
+
+    @Column()
+    private Double lng;//经度
+
+    @Column()
+    private Double lat;//纬度
 
     @Column()
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
@@ -49,19 +78,29 @@ public class Course implements Serializable {
     private String modifyBy;
 
     public Long getId() {
-        return id;
+        return courseId;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.courseId = id;
     }
 
-    public String getName() {
-        return name;
+
+
+    public Integer getStatus() {
+        return status;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    public String getCourseName() {
+        return courseName;
+    }
+
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
     }
 
     public String getLocation() {

@@ -32,7 +32,6 @@ public class MenuController {
     /**
      * @Author ypp
      * @Description //TODO 获取所有菜单
-     * @Date 16:38 2019/6/2
      * @Param []
      * @return com.signInStart.Entity.BaseClass.DataResult
      **/
@@ -77,7 +76,6 @@ public class MenuController {
     /**
      * @Author ypp
      * @Description //TODO  删除某个角色的菜单权限 ，根据具体的角色来删除
-     * @Date 14:21 2019/5/26
      * @Param [menuId, userType]
      * @return com.signInStart.Entity.BaseClass.DataResult
      **/
@@ -93,7 +91,6 @@ public class MenuController {
     /**
      * @Author ypp
      * @Description //TODO  删除某个角色的菜单权限，根据角色类型来删除
-     * @Date 14:21 2019/5/26
      * @Param [menuId, userType]
      * @return com.signInStart.Entity.BaseClass.DataResult
      **/
@@ -128,7 +125,6 @@ public class MenuController {
     /**
      * @Author ypp
      * @Description //TODO  根据传进来的菜单id，获取该菜单所分配的角色
-     * @Date 11:04 2019/5/26
      * @Param [id]
      * @return com.signInStart.Entity.BaseClass.DataResult  角色名和userType
      **/
@@ -162,7 +158,6 @@ public class MenuController {
     /**
      * @Author ypp
      * @Description //TODO  菜单树
-     * @Date 20:21 2019/6/2
      * @Param []
      * @return com.signInStart.Entity.BaseClass.DataResult
      **/
@@ -173,7 +168,6 @@ public class MenuController {
     /**
      * @Author ypp
      * @Description //TODO  根据角色类型（userType）返回拥有的菜单
-     * @Date 20:24 2019/6/4
      * @Param [userType]
      * @return com.signInStart.Entity.BaseClass.DataResult
      **/
@@ -184,7 +178,6 @@ public class MenuController {
     /**
      * @Author ypp
      * @Description //TODO  根据角色id获取菜单列表
-     * @Date 20:39 2019/6/22
      * @Params [userType]
      * @return com.signInStart.Entity.BaseClass.DataResult
      **/
@@ -197,7 +190,6 @@ public class MenuController {
     /**
      * @Author ypp
      * @Description //TODO  根据菜单代码获取用户列表
-     * @Date 22:13 2019/6/10
      * [menuValue]
      * @return com.signInStart.Entity.BaseClass.DataResult
      **/
@@ -209,7 +201,6 @@ public class MenuController {
     /**
      * @Author ypp
      * @Description //TODO  根据菜单代码获取菜单信息
-     * @Date 16:07 2019/6/7
      * @Param [userType]
      * @return com.signInStart.Entity.BaseClass.DataResult
      **/
@@ -220,7 +211,6 @@ public class MenuController {
     /**
      * @Author ypp
      * @Description //TODO  添加菜单角色
-     * @Date 22:48 2019/6/11
      * @Params [menuValue, roleID]
      * @return com.signInStart.Entity.BaseClass.DataResult
      **/
@@ -232,7 +222,6 @@ public class MenuController {
     /**
      * @Author ypp
      * @Description //TODO  获取所有菜单
-     * @Date 21:02 2019/6/22
      * @Params []
      * @return com.signInStart.Entity.BaseClass.DataResult
      **/
@@ -244,7 +233,6 @@ public class MenuController {
     /**
      * @Author ypp
      * @Description //TODO  修改菜单
-     * @Date 20:26 2019/6/22
      * @Params [menu]
      * @return com.signInStart.Entity.BaseClass.DataResult
      **/
@@ -257,7 +245,6 @@ public class MenuController {
     /**
      * @Author ypp
      * @Description //TODO  根据登陆用户获取左侧栏(废弃)
-     * @Date 21:24 2019/6/22
      * @Params []
      * @return com.signInStart.Entity.BaseClass.DataResult
      **/

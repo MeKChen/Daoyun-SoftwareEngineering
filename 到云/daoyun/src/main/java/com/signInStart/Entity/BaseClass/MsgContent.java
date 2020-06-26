@@ -4,7 +4,6 @@ import java.io.Serializable;
 /**
  * @Author liuyoyu
  * @Description //TODO  用于redis缓存，存储消息
- * @Date 8:23 2019/6/19
  * @Params  * @param null
  * @return
  **/

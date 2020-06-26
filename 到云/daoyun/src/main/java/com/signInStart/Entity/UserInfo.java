@@ -199,7 +199,6 @@ public class UserInfo implements Serializable {
     /**
      * @Author liuyoyu
      * @Description //TODO  返回角色所拥有的角色：角色名和UserType
-     * @Date 8:44 2019/5/26
      * @Param []
      * @return java.util.Map<java.lang.String,java.util.List>
      **/

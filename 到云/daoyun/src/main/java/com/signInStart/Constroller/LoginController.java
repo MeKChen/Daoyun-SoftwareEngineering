@@ -79,7 +79,6 @@ public class LoginController {
     /**
      * @Author ypp
      * @Description //TODO  发送验证邮件
-     * @Date 23:19 2019/6/11
      * @Params [receiver]
      * @return com.signInStart.Entity.BaseClass.DataResult
      **/
@@ -168,7 +167,6 @@ public class LoginController {
     /**
      * @Author ypp
      * @Description //TODO  获取用户信息
-     * @Date 20:57 2019/6/12
      * @Params []
      * @return com.signInStart.Entity.BaseClass.DataResult
      **/
@@ -180,7 +178,6 @@ public class LoginController {
     /**
      * @Author ypp
      * @Description //TODO  忘记密码
-     * @Date 21:00 2019/6/12
      * @Params [account, password, code验证码]
      * @return com.signInStart.Entity.BaseClass.DataResult
      **/

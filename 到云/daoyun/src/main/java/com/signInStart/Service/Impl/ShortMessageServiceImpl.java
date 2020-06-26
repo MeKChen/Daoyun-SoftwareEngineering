@@ -57,7 +57,6 @@ public class ShortMessageServiceImpl implements ShortMessageService {
     /**
      * @Author liuyoyu
      * @Description //TODO  从redis中拿取验证码，只做验证，不保存在数据库中
-     * @Date 21:05 2019/6/12
      * @Params [code, email]
      * @return java.lang.Integer
      **/

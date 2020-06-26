@@ -35,7 +35,6 @@ public class UserController {
     /**
      * @Author ypp
      * @Description //TODO  新增用户
-     * @Date 9:56 2019/5/26
      * @Param [userInfo]
      * @return DataResult
      **/
@@ -49,7 +48,6 @@ public class UserController {
     /**
      * @Author ypp
      * @Description //TODO  删除用户，由管理员操作
-     * @Date 10:24 2019/5/26
      * @Param [uid]
      * @return DataResult
      **/
@@ -62,7 +60,6 @@ public class UserController {
     /**
      * @Author ypp
      * @Description //TODO  修改用户信息，由管理员操作
-     * @Date 10:26 2019/5/26
      * @Param [userInfo]
      * @return DataResult
      **/
@@ -76,7 +73,6 @@ public class UserController {
     /**
      * @Author ypp
      * @Description //TODO  获取所有用户
-     * @Date 10:28 2019/5/26
      * @Param []
      * @return DataResult
      **/
@@ -90,7 +86,6 @@ public class UserController {
     /**
      * @Author ypp
      * @Description //TODO  重置密码，由管理员操作
-     * @Date 10:29 2019/5/26
      * @Param [id]
      * @return DataResult
      **/
@@ -106,7 +101,6 @@ public class UserController {
     /**
      * @Author ypp
      * @Description //TODO  批量重置密码，由管理员操作
-     * @Date 10:29 2019/5/26
      * @Param [idList]
      * @return DataResult
      **/
@@ -120,7 +114,6 @@ public class UserController {
     /**
      * @Author ypp
      * @Description //TODO  增加用户新的角色，由管理员操作
-     * @Date 23:22 2019/5/25
      * @Param [userId, roleId]
      * @return DataResult
      **/
@@ -136,7 +129,6 @@ public class UserController {
     /**
      * @Author ypp
      * @Description //TODO  通过用户id获取用户信息
-     * @Date 23:23 2019/5/25
      * @Param [userId]
      * @return DataResult
      **/
@@ -149,7 +141,6 @@ public class UserController {
     /**
      * @Author ypp
      * @Description //TODO  通过token获取用户信息，用户菜单
-     * @Date 23:23 2019/5/25
      * @Param []
      * @return DataResult
      **/
