@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="login_name">
-            <!--<p>签到Star登录</p>-->
+            <!--<p>到云登录</p>-->
             <img src="@/assets/login-title.png" style="width: 200px;margin-bottom: 20px;">
         </div>
         <el-form class="login-form" autoComplete="on" ref="loginForm" :model="loginForm" :rules="loginFormRules">
