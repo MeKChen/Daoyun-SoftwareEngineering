@@ -19,8 +19,8 @@ import java.util.Random;
 @Log4j2
 public class EmailUtils {
 
-    private static final String account = "15705951677@163.com";
-    private static final String pwd = "SQOQIKOQJYTLESEB";//授权密码
+    private static final String account = "heling_fzu@163.com";
+    private static final String pwd = "heling231231";//授权密码
     private static final String EAMIL_HOST = "smtp.163.com";
     private static final String TITLE = "【签到start】验证邮件";
     private static final String EAMIL_PORT = 465 + "";
