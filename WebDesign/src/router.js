@@ -95,17 +95,6 @@ export default new Router({
           component: () => import('./views/errPage/Page500.vue')
       }]
     }, {
-      path: '/about',
-      component: Container,
-      hidden: false,
-      children: [{
-          path: '/about/index',
-          name: 'about',
-          meta: {title: '关于', icon: 'smile'},
-          hidden: false,
-          component: () => import('./views/About.vue')
-      }]
-    }, {
       path: '*',
       name: 'Page404',
       hidden: true,
