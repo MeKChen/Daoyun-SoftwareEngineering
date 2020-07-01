@@ -19,6 +19,7 @@ public interface UserInfoRepository extends JpaRepository<UserInfo, Long>{
     Map<String, String> findUserInfoMapByAccount(String account);
 
     List<UserInfo> findUserByEmail(String email);
+    UserInfo findUserInfoByPhone(String phone);
 
     @Query("select u from UserInfo u where ( u.account = ?1 or u.email = ?1 ) and u.status = 'Normal_SYS'")
     UserInfo findUserByAccountOrEmail(String inpput);

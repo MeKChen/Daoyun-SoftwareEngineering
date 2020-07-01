@@ -31,6 +31,7 @@ public class LoginServiceImpl implements LoginService {
     @Override
     public UserInfo checkLogin(String uname, String pwd) throws FriendlyException {
         UserInfo user = userInfoRepository.findUserByAccountOrEmail(uname);
+        if (user == null) user=userInfoRepository.findUserInfoByPhone(uname);
         if (user == null || BaseSetting.STATUS.Disabled_SYS.equals(user.getStatus())) {
             throw new FriendlyException("用户不存在", DataUtils.CurrentMethodName());
         }

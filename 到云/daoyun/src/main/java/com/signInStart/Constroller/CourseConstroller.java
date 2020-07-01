@@ -28,25 +28,26 @@ public class CourseConstroller {
     @Autowired
     CourseService courseService;
 
-	@RequestMapping(value = "/allcourse", method = RequestMethod.GET)
-		public DataResult findAllCourse() throws FriendlyException {
-			List<Course> all = courseService.findAll();
-            return ResultUtils.success(all, all.size());
-		}
-
-	@RequestMapping(value = "/allcoursebyaccount", method = RequestMethod.GET)
-		public DataResult findAllCourseByAccount(UserInfo userInfo) throws FriendlyException {
-			UserInfo u= userInfoService.findUserByAccount(userInfo.getAccount());
-			List<UserCourse> all = userCourseService.findByUserID(u.getId());
-            return ResultUtils.success(all, all.size());
-		}
-	
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public DataResult findAll(Course course) throws FriendlyException {
-		Course c= courseService.findByCourseName(course.getCourseName());
+        Course c= courseService.findByCourseName(course.getCourseName());
         List<UserCourse> all = userCourseService.findByCourseID(c.getId());
         return ResultUtils.success(all, all.size());
     }
+
+    @RequestMapping(value = "/allcourse", method = RequestMethod.GET)
+        public DataResult findAllCourse() throws FriendlyException {
+            List<Course> all = courseService.findAll();
+            return ResultUtils.success(all, all.size());
+        }
+
+
+    @RequestMapping(value = "/allcoursebyaccount", method = RequestMethod.GET)
+        public DataResult findAllCourseByAccount(UserInfo userInfo) throws FriendlyException {
+            UserInfo u= userInfoService.findUserByAccount(userInfo.getAccount());
+            List<UserCourse> all = userCourseService.findByUserID(u.getId());
+            return ResultUtils.success(all, all.size());
+        }
 
 //    @RequestMapping(value = "/creatcourse", method = RequestMethod.POST)
 //    public DataResult creatCourse(Course course,UserInfo userInfo) throws FriendlyException {
@@ -158,5 +159,7 @@ public class CourseConstroller {
         }
         return ResultUtils.success();
     }
+
+
 
 }
