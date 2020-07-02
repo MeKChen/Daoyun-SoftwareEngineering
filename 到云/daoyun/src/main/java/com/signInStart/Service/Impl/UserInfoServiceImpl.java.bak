@@ -150,8 +150,8 @@ public class UserInfoServiceImpl implements UserInfoService {
         if (null == userById) {
             throw new FriendlyException("修改对象不存在", DataUtils.CurrentMethodName());
         }
-        if (loginInfoService.checkAdmin() && userRoleService.isSuperAdmin(userById.getId())) {
-            throw new FriendlyException("权限不够", DataUtils.CurrentMethodName());
+        if (loginInfoService.checkAdmin() && userRoleService.isAdmin(userById.getId())) {
+            throw new FriendlyException("管理员不能相互操作", DataUtils.CurrentMethodName());
         }
 
         if (!"".equals(userInfo.getEmail()) && userInfo.getEmail() != null) {
