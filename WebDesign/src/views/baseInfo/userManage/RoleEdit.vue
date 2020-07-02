@@ -96,7 +96,7 @@
                     roleId: 152
                 }, {
                     id: 'Admin_SYS',
-                    label: '炒鸡用户1',
+                    label: '管理员',
                     roleId: 138
                 }],
                 dialogVisible: false, // 控制添加用户的弹出框是否显示

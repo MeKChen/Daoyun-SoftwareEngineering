@@ -13,7 +13,7 @@
                     <el-input placeholder="请输入用户名或其他信息" prefix-icon="el-icon-search" v-model="search.query.text"></el-input>
                 </el-form-item>
                 <el-form-item>
-                    <el-button type="primary" icon="el-icon-search" @click="query">查询</el-button>
+                    
                     <!--<el-button @click="resetForm('userSearchForm')">重置</el-button>-->
                 </el-form-item>
             </el-form> 
@@ -22,7 +22,7 @@
         <div class="tool-wrapper">
             <el-button-group>
                 <el-button type="primary" icon="el-icon-plus" @click="createOpen" size="mini">新增</el-button>
-                <el-button type="primary" icon="el-icon-user-solid" @click="roleAssignmentOpen" size="mini">角色分配</el-button>
+                <el-button type="warning" icon="el-icon-user-solid" @click="roleAssignmentOpen" size="mini">角色分配</el-button>
                 <el-button type="danger" icon="el-icon-delete" @click="removeOpen" size="mini">删除</el-button>
             </el-button-group>
         </div>
