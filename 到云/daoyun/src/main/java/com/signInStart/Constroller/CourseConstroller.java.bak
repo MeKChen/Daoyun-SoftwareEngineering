@@ -28,27 +28,26 @@ public class CourseConstroller {
     @Autowired
     CourseService courseService;
 
-	@RequestMapping(value = "/allcourse", method = RequestMethod.GET){
-		public DataResult findAllCourse() throws FriendlyException {
-			List<Course> all = courseService.findAll();
-            return ResultUtils.success(all, all.size());
-		}
-	}
-
-	@RequestMapping(value = "/allcoursebyaccount", method = RequestMethod.GET){
-		public DataResult findAllCourseByAccount(UserInfo userInfo) throws FriendlyException {
-			UserInfo u= userInfoService.findUserByAccount(userInfo.getAccount());
-			List<UserCourse> all = userCourseService.findByUserID(u.getId());
-            return ResultUtils.success(all, all.size());
-		}
-	}
-
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public DataResult findAll(Course course) throws FriendlyException {
-		Course c= courseService.findByCourseName(course.getCourseName());
+        Course c= courseService.findByCourseName(course.getCourseName());
         List<UserCourse> all = userCourseService.findByCourseID(c.getId());
         return ResultUtils.success(all, all.size());
     }
+
+    @RequestMapping(value = "/allcourse", method = RequestMethod.GET)
+        public DataResult findAllCourse() throws FriendlyException {
+            List<Course> all = courseService.findAll();
+            return ResultUtils.success(all, all.size());
+        }
+
+
+    @RequestMapping(value = "/allcoursebyaccount", method = RequestMethod.GET)
+        public DataResult findAllCourseByAccount(UserInfo userInfo) throws FriendlyException {
+            UserInfo u= userInfoService.findUserByAccount(userInfo.getAccount());
+            List<UserCourse> all = userCourseService.findByUserID(u.getId());
+            return ResultUtils.success(all, all.size());
+        }
 
 //    @RequestMapping(value = "/creatcourse", method = RequestMethod.POST)
 //    public DataResult creatCourse(Course course,UserInfo userInfo) throws FriendlyException {
@@ -99,6 +98,12 @@ public class CourseConstroller {
             return ResultUtils.error(3, "没有权限");
         else
         {
+			List<UserCourse> alluser = userCourseService.findByCourseID(c.getId());
+			for(UserCourse uc : alluser) 
+			{
+				uc.setStatus(1);
+				userCourseService.modifyUserCourse(userCourse);
+			}
             c.setStatus(1);
             c.setLng(lng);
             c.setLat(lat);
@@ -126,12 +131,17 @@ public class CourseConstroller {
                              @RequestParam("lat") Double lat) throws FriendlyException {
         UserInfo u= userInfoService.findUserByAccount(userInfo.getAccount());
         Course c= courseService.findByCourseName(course.getCourseName());
-        if(courseService.isstatus(c)==0)
+		UserCourse userCourse=userCourseService.findByUserIdCourseId(u,c);
+		if(userCourse==null) return ResultUtils.error(2, "未加入该课程");
+        else if(courseService.isstatus(c)==0)
             return ResultUtils.error(3, "未到签到时刻");
+		else if(userCourse。getStatus==0) 
+			return ResultUtils.error(4, "重复签到");
         else if(userCourseService.distance(c,lng,lat)==0)
-            return ResultUtils.error(4, "未在签到范围内");
+            return ResultUtils.error(5, "未在签到范围内");
         else{
-            UserCourse userCourse=userCourseService.findByUserIdCourseId(u,c);
+           // UserCourse userCourse=userCourseService.findByUserIdCourseId(u,c);
+		    userCourse.setStatus(0);
             userCourse.setScore(userCourse.getScore()+2);
             userCourseService.modifyUserCourse(userCourse);
         }
@@ -160,5 +170,7 @@ public class CourseConstroller {
         }
         return ResultUtils.success();
     }
+
+
 
 }

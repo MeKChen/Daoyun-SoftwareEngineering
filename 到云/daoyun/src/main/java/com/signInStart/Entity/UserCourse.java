@@ -29,7 +29,6 @@ public class UserCourse implements Serializable {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private java.util.Date createDate;
 
-    @Column()
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private java.util.Date modifyDate;
 
@@ -42,7 +41,17 @@ public class UserCourse implements Serializable {
     @Column()
     private Integer isCharge;
 
-//    @Column()
+    @Column()
+    private Integer status;
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+    //    @Column()
 //    private String isDefault = //BaseSetting.ISDEFAULT.isDefault_SYS.toString();
 
     public UserCourse(UserInfo userInfo, Course course) {

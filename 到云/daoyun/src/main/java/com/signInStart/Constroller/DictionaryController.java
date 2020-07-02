@@ -32,7 +32,7 @@ public class DictionaryController {
         if (logiInfo == null) {
             return false;
         }
-        if (loginInfoService.checkAdmin()) {
+        if (loginInfoService.checkSupperAdimn()|| loginInfoService.checkAdmin()) {
             return true;
         }
         return false;

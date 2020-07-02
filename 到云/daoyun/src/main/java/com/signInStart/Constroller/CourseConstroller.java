@@ -98,6 +98,12 @@ public class CourseConstroller {
             return ResultUtils.error(3, "没有权限");
         else
         {
+            List<UserCourse> alluser = userCourseService.findByCourseID(c.getId());
+            for(UserCourse uc : alluser)
+            {
+                uc.setStatus(1);
+                userCourseService.modifyUserCourse(uc);
+            }
             c.setStatus(1);
             c.setLng(lng);
             c.setLat(lat);
@@ -121,16 +127,21 @@ public class CourseConstroller {
 
     @RequestMapping(value = "/signin", method = RequestMethod.POST)
     public DataResult Signin(Course course,UserInfo userInfo,
-	                    	@RequestParam("lng") Double lng,
+                             @RequestParam("lng") Double lng,
                              @RequestParam("lat") Double lat) throws FriendlyException {
         UserInfo u= userInfoService.findUserByAccount(userInfo.getAccount());
         Course c= courseService.findByCourseName(course.getCourseName());
-        if(courseService.isstatus(c)==0)
+        UserCourse userCourse=userCourseService.findByUserIdCourseId(u,c);
+        if(userCourse==null) return ResultUtils.error(2, "未加入该课程");
+        else if(courseService.isstatus(c)==0)
             return ResultUtils.error(3, "未到签到时刻");
+        else if(userCourse.getStatus()==0)
+            return ResultUtils.error(4, "重复签到");
         else if(userCourseService.distance(c,lng,lat)==0)
-            return ResultUtils.error(4, "未在签到范围内");
+            return ResultUtils.error(5, "未在签到范围内");
         else{
-            UserCourse userCourse=userCourseService.findByUserIdCourseId(u,c);
+            // UserCourse userCourse=userCourseService.findByUserIdCourseId(u,c);
+            userCourse.setStatus(0);
             userCourse.setScore(userCourse.getScore()+2);
             userCourseService.modifyUserCourse(userCourse);
         }
