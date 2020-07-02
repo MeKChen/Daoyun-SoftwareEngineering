@@ -23,13 +23,14 @@
 </template>
 
 <script>
-    import CheckinSidebar from './sidebar/CheckinSidebar';
-    import CheckinNavbar from './sidebar/CheckinNavbar'
+    import Navbar from './sidebar/Navbar'
+    import CheckinSidebar from './sidebar/Sidebar';
+    
 
     export default {
         name: 'home',
         components: {
-            CheckinSidebar, CheckinNavbar
+            CheckinSidebar, Navbar
             // HelloWorld
         },
         computed: {

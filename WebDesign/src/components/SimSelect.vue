@@ -11,7 +11,7 @@
       :multiple="multiple"
       :placeholder="placeholder"
       @input="emitChange($event)"
-      v-if="!allowCreate">
+      v-if="!allowCreate"> 
       <el-option
         v-for="item in optionList"
         :key="item.value"

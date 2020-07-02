@@ -1,4 +1,4 @@
-import loginAPI from '../../api/loginAPI'
+import loginAPI from '../../api/login'
 import {getToken, setToken, removeToken, setExpiredTime} from '../../utils/auth'
 import router from '../../router'
 

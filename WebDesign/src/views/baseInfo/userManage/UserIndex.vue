@@ -63,17 +63,17 @@
 </template>
 
 <script>
-    import ContainerSearchGroup from '../../../components/ContainerSearchGroup';
-    import UserTable from './UserTable';
-    import Pagination from '../../../components/Pagination';
-    import UserEdit from './UserEdit';
-    import PageHeader from '../../../components/PageHeader';
+    import ContainerSearchGroup from '../../../components/SearchGroup';
+    import UserTable from './RoleTable';
+    import Pagination from '../../../components/Page';
+    import UserEdit from './RoleEdit';
+    import PageHeader from '../../../components/Header';
     import {showMessage, showSimpleConfirm, showSuccess, showInfo} from '@/utils/message';
-    import UserShow from './UserShow';
-    import UserAdd from './UserAdd';
+    import UserShow from './RoleShow';
+    import UserAdd from './RoleAdd';
     import userMainAPI from '@/api/manage/userMainAPI';
-    import dictionaryMainAPI from '@/api/manage/dictionaryMainAPI';
-    import UserRole from './UserRole';
+    import dictionaryMainAPI from '@/api/manage/dictionaryAPI';
+    import UserRole from './Role';
     export default {
         name: 'UserIndex',
         components: {UserRole, UserAdd, UserShow, UserEdit, UserTable, PageHeader, Pagination, ContainerSearchGroup},

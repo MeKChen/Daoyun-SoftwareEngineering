@@ -41,7 +41,7 @@ export default {
 </script>
 
 <style rel="stylesheet/less" lang="less">
-  @import '../../styles/variables';
+  @import '../../styles/var';
 
   .card-title-svg {
     color: @thema;

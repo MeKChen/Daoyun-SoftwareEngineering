@@ -76,7 +76,7 @@
     import menuMainAPI from '../../api/manage/menuMainAPI'
     import CardTitle from '../../components/Card/CardTitle';
     import {showMessage, showSimpleConfirm, showSuccess, showInfo} from '@/utils/message';
-    import SimpleSelect from '../../components/SimpleSelect';
+    import SimpleSelect from '../../components/SimSelect';
 
     export default {
         name: 'MenuInfoEdit',

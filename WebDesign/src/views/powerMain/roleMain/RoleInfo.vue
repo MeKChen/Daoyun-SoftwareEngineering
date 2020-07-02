@@ -53,12 +53,12 @@
 <script>
     import roleMainAPI from '@/api/manage/roleMainAPI';
     import {showMessage, showSimpleConfirm, showSuccess, showInfo} from '@/utils/message';
-    import dictionaryMainAPI from '@/api/manage/dictionaryMainAPI';
+    import dictionaryMainAPI from '@/api/manage/dictionaryAPI';
     import SimpleCard from '../../../components/Card/SimpleCard';
-    import SimpleSelect from '../../../components/SimpleSelect';
+    import SimpleSelect from '../../../components/SimSelect';
 
     export default {
-        name: 'RoleInfoMain',
+        name: 'RoleInfo',
         components: {SimpleSelect, SimpleCard},
         props: {
             userTypeMap: {type: Array}

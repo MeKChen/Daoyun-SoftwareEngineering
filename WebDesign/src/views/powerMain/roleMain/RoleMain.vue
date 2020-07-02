@@ -26,13 +26,13 @@
 <script>
     import SimpleCard from '../../../components/Card/SimpleCard';
     import SystemRoleTree from './SystemRoleTree';
-    import RoleInfoMain from './RoleInfoMain';
-    import RoleMenuEdit from './RoleMenuEdit';
-    import dictionaryMainAPI from '@/api/manage/dictionaryMainAPI';
+    import RoleInfo from './RoleInfo';
+    import RoleMenuEdit from './MenuEdit';
+    import dictionaryMainAPI from '@/api/manage/dictionaryAPI';
 
     export default {
-        name: 'RoleMainIndex',
-        components: { RoleMenuEdit, RoleInfoMain, SystemRoleTree, SimpleCard },
+        name: 'RoleMain',
+        components: { RoleMenuEdit, RoleInfo, SystemRoleTree, SimpleCard },
         data () {
             return {
                 editVisible: false,

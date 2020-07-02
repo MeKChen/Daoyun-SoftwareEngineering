@@ -24,9 +24,9 @@
 </template>
 
 <script>
-    import CheckinBreadcrumb from '../../components/CheckinBreadcrumb';
+    import CheckinBreadcrumb from '../../components/Breadcrumb';
     export default {
-        name: 'CheckinNavbar',
+        name: 'Navbar',
         components: {CheckinBreadcrumb},
         data () {
             return {

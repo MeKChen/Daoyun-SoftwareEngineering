@@ -78,7 +78,7 @@
     import userMainAPI from '@/api/manage/userMainAPI';
     import {showMessage, showSimpleConfirm, showSuccess, showInfo} from '@/utils/message';
     import roleMainAPI from '@/api/manage/roleMainAPI';
-    import SimpleSelect from '../../../components/SimpleSelect';
+    import SimpleSelect from '../../../components/SimSelect';
 
     export default {
         name: 'UserEdit',

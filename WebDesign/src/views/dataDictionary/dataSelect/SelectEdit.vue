@@ -68,7 +68,7 @@
 </template>
 
 <script>
-    import dictionaryMainAPI from '@/api/manage/dictionaryMainAPI';
+    import dictionaryMainAPI from '@/api/manage/dictionaryAPI';
     import {showMessage, showSimpleConfirm, showSuccess, showInfo} from '@/utils/message';
 
     export default {
