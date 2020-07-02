@@ -31,7 +31,7 @@
                     </el-form-item>
                 </el-col>
                 <el-col :md="12" :sm="24">
-                    <el-form-item label="手机:" prop="phone">
+                    <el-form-item label="手机号:" prop="phone">
                         {{userData.phone}}
                     </el-form-item>
                 </el-col>

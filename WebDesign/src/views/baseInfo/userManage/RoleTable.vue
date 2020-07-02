@@ -44,10 +44,10 @@
         </el-table-column>
         <el-table-column label="操作" align="center">
             <template slot-scope="scope">
-                <el-button
+                <el-button type = "primary"
                         size="mini"
                         @click="openEdit(scope.row)">编辑</el-button>
-                <el-button type="primary"
+                <el-button type="danger"
                         size="mini"
                         @click="openResetPass(scope.row)">重置密码</el-button>
             </template>
@@ -125,22 +125,30 @@
             },
             // 将性别英文转为中文
             sexText (sex) {
-                // this.$utils.format.mapTransfer(sex, this.sexMap, '女');
-                for (let item of this.sexMap) {
-                    if (item.value === sex) {
-                        return item.text;
-                    }
-                }
-                return '女'
+                
+                // // this.$utils.format.mapTransfer(sex, this.sexMap, '女');
+                // for (let item of this.sexMap) {
+                //     if (item.value === sex) {
+                //         console.log(item.value)
+                //         return sex
+                //     }
+                // }
+                if (sex=="female") return "女"
+                else if (sex == "male") return "男"
+                else return "null"
+                
             },
             // 将用户状态英文转为中文
             setUserStatus (status) {
-                for (let item of this.userStatusMap) {
-                    if (item.value === status) {
-                        return item.text;
-                    }
-                }
-                return '未定义';
+                console.log(status)
+                // for (let item of this.userStatusMap) {
+                //     if (item.value === status) {
+                //         return item.text;
+                //     }
+                // }
+                // return '未定义';
+                if (status=='Disabled') return "禁止";
+                else return "正常";
             },
             formatter (row, column) {
                 return row.address;
@@ -160,18 +168,22 @@
             },
             // 将用户角色英文转为中文
             setUserRole (role) {
-                // console.log(role)
-                let roleSpan = '';
-                if (role === null) return '暂无角色';
-                for (var i = 0; i < role.length; i++) {
-                    roleSpan += role[i].roleName;
-                    if (i === role.length - 1) {
-                        return roleSpan;
-                    }
-                    roleSpan += '|';
-                }
-                return roleSpan;
+                console.log(role.roleName)
+                console.log("=====")
+                // let roleSpan = '';
+                // if (role === null) return '暂无角色';
+                // for (var i = 0; i < role.length; i++) {
+                //     roleSpan += role[i].roleName;
+                //     if (i === role.length - 1) {
+                //         return roleSpan;
+                //     }
+                //     roleSpan += '|';
+                // }
+                // return roleSpan;
                 // return '用户';
+                if (role.roleName=="admin") return "管理员";
+                if (role.roleName=="super_admin") return "超级管理员";
+                if (role.roleName=="common_user") return "普通用户";
             },
             // 打开编辑窗口
             openEdit (row) {
