@@ -1,11 +1,11 @@
 <template>
-  <div></div>
+    <div>首页</div>
 </template>
 
 <script>
-  export default {
-    name: 'RoleInterfaceEdit'
-  }
+    export default {
+        name: 'Home'
+    }
 </script>
 
 <style scoped>

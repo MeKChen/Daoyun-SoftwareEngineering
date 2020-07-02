@@ -21,12 +21,12 @@
  
 <script>
     import menuMainAPI from '@/api/manage/menuMainAPI'
-    import dictionaryMainAPI from '@/api/manage/dictionaryMainAPI';
+    import dictionaryMainAPI from '@/api/manage/dictionaryAPI';
     import {showMessage, showSimpleConfirm, showSuccess, showInfo} from '@/utils/message';
     import SimpleCard from '../../../components/Card/SimpleCard';
 
     export default {
-        name: 'RoleMenuEdit',
+        name: 'MenuEdit',
         components: {SimpleCard},
         props: {
             roleId: {},

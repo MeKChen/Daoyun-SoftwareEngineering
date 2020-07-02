@@ -1,46 +1,61 @@
 <template>
-    <el-dialog title="数据字典添加"
+    <el-dialog title="数据字典键值添加"
                :visible.sync="dialogVisible"
                :close-on-click-modal="false">
         <el-form
-                ref="dictAddForm"
-                :model="dictData"
+                ref="dataSelAddForm"
+                :model="dataSelData"
                 size="small"
                 :rules="rules"
                 v-loading="showLoading"
                 label-width="100px"
-                label-position="right" 
+                label-position="right"
                 @keyup.enter.native="addSubmit">
             <el-row :gutter="20">
+                <!--<el-col :md="12" :sm="24">-->
+                    <!--<el-form-item label="字典名称:" prop="dataValue">-->
+                        <!--{{dataSelData.dictionary.dataValue}}--> 
+                    <!--</el-form-item>-->
+                <!--</el-col>-->
+                <!--<el-col :md="12" :sm="24">-->
+                    <!--<el-form-item label="字典key:" prop="dictionary">-->
+                        <!--{{dataSelData.dictionary.dataKey}}-->
+                    <!--</el-form-item>-->
+                <!--</el-col>-->
                 <el-col :md="12" :sm="24">
-                    <el-form-item label="参数名称:" prop="dataValue">
-                        <el-input v-model="dictData.dataValue" placeholder="请输入参数名称"></el-input>
+                    <el-form-item label="参数名称:" prop="contentValue">
+                        <el-input v-model="dataSelData.contentValue"></el-input>
                     </el-form-item>
                 </el-col>
                 <el-col :md="12" :sm="24">
-                    <el-form-item label="参数Key:" prop="dataKey">
-                        <el-input v-model="dictData.dataKey" placeholder="请输入参数key值"></el-input>
+                    <el-form-item label="参数值:" prop="contentKey">
+                        <el-input v-model="dataSelData.contentKey"></el-input>
                     </el-form-item>
                 </el-col>
                 <el-col :md="12" :sm="24">
-                    <el-form-item label="参数类型:" prop="dataTypeKey">
-                        <el-select v-model="dictData.dataTypeKey">
-                            <el-option v-for="item in dataTypeKeyOptionsList"
+                    <el-form-item label="序列:" prop="sequence">
+                        <el-input v-model="dataSelData.sequence"></el-input>
+                    </el-form-item>
+                </el-col>
+                <el-col :md="12" :sm="24">
+                    <el-form-item label="状态:" prop="status">
+                        <el-select v-model="dataSelData.status">
+                            <el-option v-for="item in statusOptionsList"
                                        :key="item.value"
                                        :label="item.label"
                                        :value="item.value"
-                                       placeholder="请选择参数类型">
+                                       placeholder="请选择">
                             </el-option>
                         </el-select>
                     </el-form-item>
                 </el-col>
                 <el-col :md="24" :sm="24">
-                    <el-form-item label="描述:" prop="dataDesc">
+                    <el-form-item label="描述:" prop="describe">
                         <el-input
                                 type="textarea"
                                 :rows="3"
                                 placeholder="请输入内容"
-                                v-model="dictData.dataDesc"></el-input>
+                                v-model="dataSelData.describe"></el-input>
                     </el-form-item>
                 </el-col>
             </el-row>
@@ -51,50 +66,64 @@
         </div>
     </el-dialog>
 </template>
-<script>
-    import dictionaryMainAPI from '@/api/manage/dictionaryMainAPI';
-    import {showMessage, showSimpleConfirm, showSuccess, showInfo} from '@/utils/message';
 
+<script>
+    import dictionaryMainAPI from '@/api/manage/dictionaryAPI';
+    import {showMessage, showSimpleConfirm, showSuccess, showInfo} from '@/utils/message';
     export default {
-        name: 'DictionaryAdd',
+        name: 'DataSelectAdd',
         data () {
             return {
-                dictData: {},
-                dataTypeKeyOptionsList: [
-                    {
-                        value: 'System',
-                        label: '系统参数'
-                    }, {
-                        value: 'Standard',
-                        label: '标准参数'
-                    }
-                ],
                 dialogVisible: false, // 控制添加弹出框是否显示
                 showLoading: false, // 控制组件加载动画
                 rules: {
-                    dataTypeKey: [
-                        {required: true, message: '数据类型不能为空', trigger: 'blur'}
+                    contentValue: [
+                        {required: true, message: '值不能为空', trigger: 'blur'}
+                    ],
+                    contentKey: [
+                        {required: true, message: '键不能为空', trigger: 'blur'}
+                    ],
+                    sequence: [
+                        {required: true, message: '序列不能为空', trigger: 'blur'}
                     ]
-                }
+                },
+                dataSelData: {
+                    status: 'Normal',
+                    dicID: '',
+                    dictionary: {}
+                },
+                // 状态下拉框内容
+                statusOptionsList: [
+                    {
+                        value: 'Normal',
+                        label: '正常'
+                    }, {
+                        value: 'Disabled',
+                        label: '禁用'
+                    }
+                ]
             }
+        },
+        props: {
+            selDicId: {type: Number}
         },
         methods: {
             openCreate () {
+                // console.log(this.selDicId);
                 this.dialogVisible = true;
             },
             // 新增完后将信息表单清空
             init () {
-                this.$refs.dictAddForm.resetFields();
+                this.$refs.dataSelAddForm.resetFields();
             },
             createSubmit (event) {
-                console.log(event);
                 this.validate().then(valid => {
                     this.loadingStart();
-                    dictionaryMainAPI.addDict(this.dictData).then(res => {
+                    dictionaryMainAPI.addDataItem(this.dataSelData, this.selDicId).then(res => {
                         console.log(res);
                         this.loadingEnd();
                         this.$emit('load'); // 新建完刷新表单
-                        showMessage('success', '新增数据字典成功!');
+                        showMessage('success', '新增成功!');
                         this.close();
                     }).catch(err => {
                         this.loadingEnd();
@@ -105,7 +134,7 @@
             validate () {
                 const _this = this;
                 var p1 = new Promise(function (resolve, reject) {
-                    return _this.$refs.dictAddForm.validate((valid) => {
+                    return _this.$refs.dataSelAddForm.validate((valid) => {
                         if (valid) {
                             resolve();
                         }

@@ -1,14 +1,13 @@
 <template>
-    <div>首页</div>
+
 </template>
 
 <script>
     export default {
-        name: 'HomeIndex'
+        name: 'Lock'
     }
 </script>
 
 <style scoped>
 
 </style>
- 

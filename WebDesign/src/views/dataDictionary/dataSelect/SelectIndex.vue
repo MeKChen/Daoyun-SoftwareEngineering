@@ -51,13 +51,13 @@
 </template>
 
 <script>
-    import dictionaryMainAPI from '@/api/manage/dictionaryMainAPI';
-    import DataSelectTable from './DataSelectTable';
-    import Pagination from '../../../components/Pagination';
-    import ContainerSearchGroup from '../../../components/ContainerSearchGroup';
-    import DataSelectEdit from './DataSelectEdit';
-    import DataSelectAdd from './DataSelectAdd';
-    import DataSelectShow from './DataSelectShow';
+    import dictionaryMainAPI from '@/api/manage/dictionaryAPI';
+    import DataSelectTable from './SelectTable';
+    import Pagination from '../../../components/Page';
+    import ContainerSearchGroup from '../../../components/SearchGroup';
+    import DataSelectEdit from './SelectEdit';
+    import DataSelectAdd from './SelectAdd';
+    import DataSelectShow from './SelectShow';
     import {showMessage, showSimpleConfirm, showSuccess, showInfo} from '@/utils/message';
 
     export default {

@@ -14,7 +14,7 @@
   import roleMainAPI from '@/api/manage/roleMainAPI';
 
   export default {
-    name: 'SystemRoleTree',
+    name: 'RoleTree',
     props: {
       handleNodeClick: {
         type: Function,

@@ -33,14 +33,14 @@
 </template>
 
 <script>
-    import DictionaryAdd from './DictionaryAdd';
-    import DictionaryEdit from './DictionaryEdit';
-    import DictionaryTable from './DictionaryTable';
-    import Pagination from '../../../components/Pagination';
+    import DictionaryAdd from './DictAdd';
+    import DictionaryEdit from './DictEdit';
+    import DictionaryTable from './DictTable';
+    import Pagination from '../../../components/Page';
     import {showMessage, showSimpleConfirm, showSuccess, showInfo} from '@/utils/message';
-    import ContainerSearchGroup from '../../../components/ContainerSearchGroup';
-    import DictionaryShow from './DictionaryShow';
-    import dictionaryMainAPI from '@/api/manage/dictionaryMainAPI';
+    import ContainerSearchGroup from '../../../components/SearchGroup';
+    import DictionaryShow from './DictShow';
+    import dictionaryMainAPI from '@/api/manage/dictionaryAPI';
 
     export default {
         name: 'DictionaryIndex',

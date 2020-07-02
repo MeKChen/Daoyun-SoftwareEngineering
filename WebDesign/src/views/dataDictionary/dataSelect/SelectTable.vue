@@ -35,7 +35,7 @@
 </template>
 
 <script>
-    import dictionaryMainAPI from '@/api/manage/dictionaryMainAPI';
+    import dictionaryMainAPI from '@/api/manage/dictionaryAPI';
 
     export default {
         name: 'DataSelectTable',

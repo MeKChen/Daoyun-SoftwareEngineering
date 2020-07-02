@@ -26,9 +26,9 @@
 </template>
 
 <script>
-    import RegisterForm from './RegisterForm'
-    import ForgetForm from './ForgetForm'
-    import LoginForm from './LoginForm'
+    import RegisterForm from './Register'
+    import ForgetForm from './ForgetPassword'
+    import LoginForm from './LoginPage'
 
     export default {
         name: 'Login',

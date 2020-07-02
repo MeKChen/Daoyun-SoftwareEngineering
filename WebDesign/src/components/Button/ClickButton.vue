@@ -8,7 +8,7 @@
   // import {parseTime} from '@/utils';
 
   export default {
-    name: 'ClockClickButton',
+    name: 'ClickButton',
     props: {
       second: {
         type: Number,

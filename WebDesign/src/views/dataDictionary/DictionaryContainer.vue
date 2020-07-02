@@ -13,9 +13,9 @@
 </template>
 
 <script>
-    import PageHeader from '../../components/PageHeader';
-    import DictionaryIndex from './dataDic/DictionaryIndex';
-    import DataSelectIndex from './dataSelect/DataSelectIndex';
+    import PageHeader from '../../components/Header';
+    import DictionaryIndex from './dataDic/DictIndex';
+    import DataSelectIndex from './dataSelect/SelectIndex';
     export default {
         name: 'DictionaryContainer', 
         components: {DataSelectIndex, DictionaryIndex, PageHeader}, 
