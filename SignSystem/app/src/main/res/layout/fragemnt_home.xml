@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="66dp"
+        app:backgroundTint="@color/colorPrimary"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="150dp"
+        app:backgroundTint="@color/colorPrimary"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="28px"
+            android:layout_marginTop="20px"
+            android:layout_marginRight="28px"
+            android:layout_marginBottom="15px"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/login_edit_shape"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/edit_search" />
+
+                <EditText
+
+                    android:id="@+id/ed_keyword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@null"
+                    android:hint="请输入你要搜索的班级UID"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/login_btn_shape"
+                android:text="搜索班课"
+                android:textColor="#F3F3F3"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="60dp"
+            android:orientation="vertical">
+
+            <ListView
+
+                android:id="@+id/lv_data"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:divider="@null"
+                android:dividerHeight="10dp"
+                android:scrollbars="none" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

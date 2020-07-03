@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/tv_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:text="账号：201808720135"
+        android:textColor="#000"
+        android:textSize="14sp" />
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:text="邮箱：1171636667@qq.com"
+        android:textColor="#000"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/tv_role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:text="角色：老师"
+        android:textColor="#000"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btn_my_course"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/login_btn_shape"
+        android:text="查看我的课程"
+        android:textColor="#fff" />
+
+
+
+    <Button
+        android:id="@+id/btn_exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/login_btn_shape"
+        android:text="退出登录"
+        android:textColor="#fff" />
+</LinearLayout>
