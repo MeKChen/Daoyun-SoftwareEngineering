@@ -150,13 +150,49 @@ public class UserInfoServiceImpl implements UserInfoService {
         if (null == userById) {
             throw new FriendlyException("修改对象不存在", DataUtils.CurrentMethodName());
         }
-        if (loginInfoService.checkAdmin() && userRoleService.isSuperAdmin(userById.getId())) {
+        if (loginInfoService.checkAdmin() && userRoleService.isSupperAdmin(userById.getId())) {
             throw new FriendlyException("权限不够", DataUtils.CurrentMethodName());
         }
 
         if (!"".equals(userInfo.getEmail()) && userInfo.getEmail() != null) {
             if (findUserByEmail(userInfo.getEmail()) != null && !userInfo.getEmail().equals(userById.getEmail())) {
                 throw new FriendlyException("邮箱已被占用", DataUtils.CurrentMethodName());
+            }
+            userById.setEmail(userInfo.getEmail());
+        } else {
+            throw new FriendlyException("邮箱不能为空", DataUtils.CurrentMethodName());
+        }
+        if (!"".equals(userInfo.getUserName()) && userInfo.getUserName() != null) {
+            userById.setUserName(userInfo.getUserName());
+        }
+        if (!"".equals(userInfo.getStatus()) && userInfo.getStatus() != null) {
+            userById.setStatus(userInfo.getStatus());
+        }
+        if (!"".equals(userInfo.getPhone()) && userInfo.getPhone() != null) {
+            userById.setPhone(userInfo.getPhone());
+        }
+        if (!"".equals(userInfo.getSex()) && userInfo.getSex() != null) {
+            userById.setSex(userInfo.getSex());
+        }
+        userById.setModifyDate(new Date());
+        userById.setModifyBy(loginInfoService.getAccount());
+        userInfoRepository.save(userById);
+        return 0;//修改成功
+    }
+
+    @Override
+    public Integer modifyPer(UserInfo userInfo) throws FriendlyException {
+        UserInfo userById = findUserById(userInfo.getId());
+        if (null == userById) {
+            throw new FriendlyException("修改对象不存在", DataUtils.CurrentMethodName());
+        }
+        if (loginInfoService.getUserInfoID()!= userById.getId()) {
+            throw new FriendlyException("不能修改他人信息", DataUtils.CurrentMethodName());
+        }
+
+        if (!"".equals(userInfo.getEmail()) && userInfo.getEmail() != null) {
+            if (findUserByEmail(userInfo.getEmail()) != null && !userInfo.getEmail().equals(userById.getEmail())) {
+                throw new FriendlyException("邮箱已被使用", DataUtils.CurrentMethodName());
             }
             userById.setEmail(userInfo.getEmail());
         } else {

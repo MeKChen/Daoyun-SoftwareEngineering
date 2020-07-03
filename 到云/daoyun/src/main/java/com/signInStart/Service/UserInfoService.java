@@ -21,6 +21,8 @@ public interface UserInfoService {
 
     Integer modify(UserInfo user) throws FriendlyException;
 
+    Integer modifyPer(UserInfo user) throws FriendlyException;
+
     List<UserInfo> findUserByEmail(String email) throws FriendlyException;
 
     List<UserInfo> findAll() throws FriendlyException;

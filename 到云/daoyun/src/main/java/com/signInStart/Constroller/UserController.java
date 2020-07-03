@@ -70,6 +70,13 @@ public class UserController {
         return ResultUtils.success();
     }
 
+    @RequestMapping(value = "/perInfo", method = RequestMethod.POST)
+    public DataResult modifyPerInfo(UserInfo userInfo) throws FriendlyException {
+        userInfoService.modifyPer(userInfo);
+        return ResultUtils.success();
+    }
+
+
     /**
      * @Author ypp
      * @Description //TODO  获取所有用户
