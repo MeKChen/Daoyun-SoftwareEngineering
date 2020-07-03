@@ -37,10 +37,6 @@
             isCollapse () {
                 return this.$store.state.app.sidebar.isCollapse
             }
-            // userName () {
-            //     console.log(this.$store.state)
-            //     // return this.$store.state.user.userName
-            // }
         },
         created () {
             console.log(this.$store.state.user);

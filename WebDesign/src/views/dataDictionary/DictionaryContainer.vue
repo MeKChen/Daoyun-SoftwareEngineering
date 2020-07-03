@@ -5,9 +5,6 @@
             <el-tab-pane label="数据字典" name="first">
                 <dictionary-index></dictionary-index>
             </el-tab-pane>
-            <el-tab-pane label="标准数据维护" name="second">
-                <data-select-index></data-select-index>
-            </el-tab-pane>
         </el-tabs>
     </div>
 </template>

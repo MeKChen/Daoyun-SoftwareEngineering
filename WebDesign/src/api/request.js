@@ -4,7 +4,6 @@ import {setToken, getToken, removeToken} from '../utils/auth';
 import store from '../store/index'
 
 const service = axios.create({
-    //baseURL: 'http://139.196.201.127:8081', // process.env.VUE_APP_BASE_API, // api的base_url
     baseURL: 'http://139.196.201.127:8081',
     timeout: 5000
 })
@@ -42,7 +41,6 @@ service.interceptors.response.use(
         if (constant.ERROR_CODE_NETWORK_ERROR === error.code) {
             message.showError('网络错误!');
             return;
-            // return Promise.reject();
         }
         let {data} = error.response;
         if (data !== undefined || data.msg !== undefined) {

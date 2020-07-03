@@ -88,15 +88,15 @@
                 userData: {},
                 roleList: [{
                     id: 'SupperAdmin_SYS',
-                    label: '超级管理员',
+                    label: '管理员',
                     roleId: 105
                 }, {
                     id: 'User_SYS',
-                    label: '普通用户',
+                    label: '学生',
                     roleId: 152
                 }, {
                     id: 'Admin_SYS',
-                    label: '管理员',
+                    label: '教师',
                     roleId: 138
                 }],
                 dialogVisible: false, // 控制添加用户的弹出框是否显示
@@ -146,9 +146,6 @@
             }
         },
         created () {
-            // roleMainAPI.getAllRole().then(res => {
-            //     this.roleList = res.data;
-            // });
         },
         methods: {
             // 提交表单

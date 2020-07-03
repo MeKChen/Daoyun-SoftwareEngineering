@@ -97,11 +97,7 @@
                     showInfo('取消删除');
                 })
             },
-            // 打开查看页面
-            // showOpen (row) {
-            //     this.$refs.DictionaryShow.open(row.id);
-            // },
-            // 查询
+        
             query () {
                 this.search.page = 1;
                 this.load();

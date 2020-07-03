@@ -53,8 +53,6 @@ export default {
     ]),
     paginationLayout () {
       return 'total, sizes, prev, pager, next, jumper';
-      // if (this.device === 'desktop') { return 'total, sizes, prev, pager, next, jumper' }
-      // return 'total,prev,next'
     }
   }
 }

@@ -92,10 +92,7 @@
                 ],
                 // 验证规则
                 rules: {
-                    // account: [
-                    //     {required: true, message: '账号不能为空', trigger: 'blur'},
-                    //     {min: 5, max: 10, message: '账号的长度需大于4个小于10个', trigger: 'blur'}
-                    // ]
+
                 }
             }
         },

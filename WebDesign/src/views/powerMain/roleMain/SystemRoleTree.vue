@@ -38,9 +38,6 @@
         roleMainAPI.getAllRole().then(res => {
             console.log(res)
             this.treeData = res.data;
-            // if (res.data.length>0){
-            //     this.h
-            // }
         }).finally(() => {
             setTimeout(() => {
                 this.loading = false;

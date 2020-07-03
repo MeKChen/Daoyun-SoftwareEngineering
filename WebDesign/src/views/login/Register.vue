@@ -23,7 +23,6 @@
                     <div class="svg-container" slot="prefix">
                         <icon name="email" :w="16" :h="16"></icon>
                     </div>
-                    <!--<div slot="suffix" @click="getVercode" class="login-get-code">获取验证码</div>-->
                 </el-input>
                 <clock-click-button type="plain"
                                       style="float: right;width: 35%"
@@ -184,11 +183,11 @@
                     });
                 })
             },
-            // 开始加载的动画
+            // 开始加载
             loadingStart () {
                 this.showLoading = true;
             },
-            // 结束加载的动画
+            // 结束加载
             loadingEnd () {
                 this.showLoading = false;
             }

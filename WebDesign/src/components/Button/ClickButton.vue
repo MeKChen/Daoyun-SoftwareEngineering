@@ -5,8 +5,6 @@
 </template>
 
 <script>
-  // import {parseTime} from '@/utils';
-
   export default {
     name: 'ClickButton',
     props: {

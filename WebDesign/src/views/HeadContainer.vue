@@ -31,7 +31,6 @@
         name: 'home',
         components: {
             CheckinSidebar, CheckinNavbar
-            // HelloWorld
         },
         computed: {
             isCollapse () {

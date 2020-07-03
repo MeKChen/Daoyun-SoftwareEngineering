@@ -36,11 +36,6 @@
             <template slot-scope="scope">
                 <span>{{setUserRole(scope.row.role)}}</span>
             </template>
-            <!--<template slot-scope="scope">-->
-                <!--<div v-for="item in scope.row.role" :key="item" class="role-name-tag">-->
-                    <!--<el-tag type="warning" close-transition >{{ setUserRole(item) }}</el-tag>-->
-                <!--</div>-->
-            <!--</template>-->
         </el-table-column>
         <el-table-column label="操作" align="center">
             <template slot-scope="scope">
@@ -125,14 +120,6 @@
             },
             // 将性别英文转为中文
             sexText (sex) {
-                
-                // // this.$utils.format.mapTransfer(sex, this.sexMap, '女');
-                // for (let item of this.sexMap) {
-                //     if (item.value === sex) {
-                //         console.log(item.value)
-                //         return sex
-                //     }
-                // }
                 if (sex=="female") return "女"
                 else if (sex == "male") return "男"
                 else return "null"
@@ -141,12 +128,6 @@
             // 将用户状态英文转为中文
             setUserStatus (status) {
                 console.log(status)
-                // for (let item of this.userStatusMap) {
-                //     if (item.value === status) {
-                //         return item.text;
-                //     }
-                // }
-                // return '未定义';
                 if (status=='Disabled') return "禁止";
                 else return "正常";
             },
@@ -170,20 +151,9 @@
             setUserRole (role) {
                 console.log(role.roleName)
                 console.log("=====")
-                // let roleSpan = '';
-                // if (role === null) return '暂无角色';
-                // for (var i = 0; i < role.length; i++) {
-                //     roleSpan += role[i].roleName;
-                //     if (i === role.length - 1) {
-                //         return roleSpan;
-                //     }
-                //     roleSpan += '|';
-                // }
-                // return roleSpan;
-                // return '用户';
-                if (role.roleName=="admin") return "管理员";
-                if (role.roleName=="super_admin") return "超级管理员";
-                if (role.roleName=="common_user") return "普通用户";
+                if (role.roleName=="admin") return "教师";
+                if (role.roleName=="superadmin") return "管理员";
+                if (role.roleName=="common_user") return "学生";
             },
             // 打开编辑窗口
             openEdit (row) {

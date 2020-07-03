@@ -3,18 +3,10 @@
         <page-header title="用户信息管理"></page-header>
         <container-search-group>
             <el-form :inline="true" :model="search" ref="userSearchForm" size="mini" >
-                <!--<el-form-item label="账号" prop="number">-->
-                    <!--<el-input v-model="search.query.courseNumber" placeholder="账号"></el-input>-->
-                <!--</el-form-item>-->
-                <!--<el-form-item label="用户名" prop="name">-->
-                    <!--<el-input v-model="search.query.courseName" placeholder="用户名"></el-input>-->
-                <!--</el-form-item>-->
                 <el-form-item label="搜索：" prop="searchText">
                     <el-input placeholder="请输入用户名或其他信息" prefix-icon="el-icon-search" v-model="search.query.text"></el-input>
                 </el-form-item>
                 <el-form-item>
-                    
-                    <!--<el-button @click="resetForm('userSearchForm')">重置</el-button>-->
                 </el-form-item>
             </el-form> 
         </container-search-group>
@@ -22,7 +14,7 @@
         <div class="tool-wrapper">
             <el-button-group>
                 <el-button type="primary" icon="el-icon-plus" @click="createOpen" size="mini">新增</el-button>
-                <el-button type="warning" icon="el-icon-user-solid" @click="roleAssignmentOpen" size="mini">角色分配</el-button>
+                
                 <el-button type="danger" icon="el-icon-delete" @click="removeOpen" size="mini">删除</el-button>
             </el-button-group>
         </div>

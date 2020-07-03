@@ -12,16 +12,6 @@
                 label-position="right"
                 @keyup.enter.native="addSubmit">
             <el-row :gutter="20">
-                <!--<el-col :md="12" :sm="24">-->
-                    <!--<el-form-item label="字典名称:" prop="dataValue">-->
-                        <!--{{dataSelData.dictionary.dataValue}}--> 
-                    <!--</el-form-item>-->
-                <!--</el-col>-->
-                <!--<el-col :md="12" :sm="24">-->
-                    <!--<el-form-item label="字典key:" prop="dictionary">-->
-                        <!--{{dataSelData.dictionary.dataKey}}-->
-                    <!--</el-form-item>-->
-                <!--</el-col>-->
                 <el-col :md="12" :sm="24">
                     <el-form-item label="参数名称:" prop="contentValue">
                         <el-input v-model="dataSelData.contentValue"></el-input>

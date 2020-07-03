@@ -77,7 +77,6 @@ const user = {
             return new Promise((resolve, reject) => {
                 loginAPI.logout().then(() => {
                     commit('SET_TOKEN', '');
-                    // commit('SET_ROLES', [])
                     removeToken();
                     resolve()
                 }).catch(error => {
