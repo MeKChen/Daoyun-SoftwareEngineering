@@ -6,11 +6,6 @@ public class BaseSetting {
         Disabled_SYS
     }
 
-    public enum ROLE { //废弃不用了
-        User_SYS,
-        Admin_SYS,
-        SupperAdmin_SYS
-    }
     public enum DATATYPE{
         System_SYS,
         Standard_SYS

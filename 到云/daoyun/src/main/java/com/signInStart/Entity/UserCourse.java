@@ -51,8 +51,6 @@ public class UserCourse implements Serializable {
     public void setStatus(Integer status) {
         this.status = status;
     }
-    //    @Column()
-//    private String isDefault = //BaseSetting.ISDEFAULT.isDefault_SYS.toString();
 
     public UserCourse(UserInfo userInfo, Course course) {
         this.userInfo = userInfo;

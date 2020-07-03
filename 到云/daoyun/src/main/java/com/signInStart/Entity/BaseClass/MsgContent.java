@@ -1,12 +1,7 @@
 package com.signInStart.Entity.BaseClass;
 
 import java.io.Serializable;
-/**
- * @Author liuyoyu
- * @Description //TODO  用于redis缓存，存储消息
- * @Params  * @param null
- * @return
- **/
+
 public class MsgContent implements Serializable {
     public enum TYPE{
         EMAIL,

@@ -1,7 +1,4 @@
-/**
- * created by hyf
- * Date:2020/5/20
- **/
+
 package com.signInStart.Utils;
 
 import com.signInStart.Entity.BaseClass.BaseSetting;
@@ -58,25 +55,12 @@ public class DataUtils {
         return s == null || "".equals(s);
     }
 
-    /**
-     * @Author liuyoyu
-     * @Description //TODO  判断是否属于usertype
-     * @Date 2020/5/20
-     * @Param [userType]
-     * @return java.lang.Boolean
-     **/
     public static Boolean containsUserType(String userType) {
         return BaseSetting.USRTYPE.Admin_SYS.toString().equals(userType) ||
                 BaseSetting.USRTYPE.SupperAdmin_SYS.toString().equals(userType) ||
                 BaseSetting.USRTYPE.User_SYS.toString().equals(userType);
     }
-    /**
-     * @Author hyf
-     * @Description //TODO  判断是否属于usertype
-     * @Date 2020/5/20
-     * @Param [userType]
-     * @return java.lang.Boolean
-     **/
+
     public static Boolean containsUserType(String[] userType) {
         for (String u : userType) {
             if (!containsUserType(u)) {
@@ -85,13 +69,7 @@ public class DataUtils {
         }
         return true;
     }
-    /**
-     * @Author hyf
-     * @Description //TODO  获取当前的完整的方法名称
-     * @Date 22:47 2020/5/20
-     * @Params []
-     * @return java.lang.String
-     **/
+
     public static String CurrentMethodName() {
         String className = Thread.currentThread().getStackTrace()[2].getClassName();
         String methodName = Thread.currentThread().getStackTrace()[2].getMethodName();
@@ -115,13 +93,7 @@ public class DataUtils {
         }
         return map;
     }
-    /**
-     * @Author hyf
-     * @Description //TODO  获取客户端ip
-     * @Date 2020/5/20
-     * @Params []
-     * @return java.lang.String
-     **/
+
     public static String GetClientIP(HttpServletRequest request){
         String ip = request.getHeader("x-forwarded-for");
         // Proxy-Client-IP 这个一般是经过apache http服务器的请求才会有，用apache http做代理时一般会加上Proxy-Client-IP请求头，而WL-Proxy-Client-IP是他的weblogic插件加上的头。

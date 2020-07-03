@@ -151,7 +151,6 @@ public class UserRoleServiceImpl implements UserRoleService {
     }
 
     /**
-     * @Author liuyoyu
      * @Description //TODO  修改用户角色
      * @Params [userID, roleID, newID]
      * @return void

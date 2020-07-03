@@ -32,14 +32,7 @@ public class Role implements Serializable {
 
     //角色所属类型：普通用户、管理员、超级管理员; 角色类型决定用户具有哪些权限；
     @Column()
-    private String userType = BaseSetting.ROLE.User_SYS.toString();
-
-//    //角色所属分组
-//    @Column()
-//    private String groupBy;
-
-//    @Column()
-//    private String status;
+    private String userType = BaseSetting.ROLE.User_SYS.toString()
 
     @Column()
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

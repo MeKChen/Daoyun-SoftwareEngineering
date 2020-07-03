@@ -19,13 +19,6 @@ public class ShortMessageServiceImpl implements ShortMessageService {
     @Autowired
     ShortMessageRepository shortMessageRepository;
 
-    /**
-     * 发送邮箱验证码
-     * @param account
-     * @param receiver
-     * @param purpose
-     * @return
-     */
     @Override
     public Integer sendEmailMessage(String account, String receiver, String purpose)throws FriendlyException {
         if ("".equals(receiver)) {
@@ -55,7 +48,6 @@ public class ShortMessageServiceImpl implements ShortMessageService {
         throw new FriendlyException("验证错误");
     }
     /**
-     * @Author liuyoyu
      * @Description //TODO  从redis中拿取验证码，只做验证，不保存在数据库中
      * @Params [code, email]
      * @return java.lang.Integer
