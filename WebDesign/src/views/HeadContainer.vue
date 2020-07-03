@@ -55,7 +55,7 @@
             mounted: function () {
                 let user = sessionStorage.getItem('user');
                 if (user) {
-                    this.username = user;
+                    this.username = user; 
                 }
             }
         }
