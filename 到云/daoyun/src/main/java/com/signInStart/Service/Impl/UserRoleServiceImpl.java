@@ -71,7 +71,6 @@ public class UserRoleServiceImpl implements UserRoleService {
     /**
      * 删除用户的所有角色
      * @param userId
-     * @return
      */
     @Override
     @Transactional
@@ -95,7 +94,6 @@ public class UserRoleServiceImpl implements UserRoleService {
     /**
      * 判断是否有管理员或超管身份
      * @param userId
-     * @return
      */
     @Override
     public Boolean isAdmin(Long userId) {
@@ -111,7 +109,6 @@ public class UserRoleServiceImpl implements UserRoleService {
     /**
      * 检查是否有超级管理员的身份
      * @param userId
-     * @return
      */
     @Override
     public Boolean isSupperAdmin(Long userId) {
@@ -127,7 +124,6 @@ public class UserRoleServiceImpl implements UserRoleService {
     /**
      * 查找用户默认角色
      * @param userId
-     * @return
      */
     @Override
     public UserRole findDefaultRoleByUserId(Long userId) {
@@ -153,7 +149,6 @@ public class UserRoleServiceImpl implements UserRoleService {
     /**
      * @Description //TODO  修改用户角色
      * @Params [userID, roleID, newID]
-     * @return void
      **/
     @Override
     public void editRole(Long userID, Long roleID, Long newID) throws FriendlyException {

@@ -50,7 +50,6 @@ public class ShortMessageServiceImpl implements ShortMessageService {
     /**
      * @Description //TODO  从redis中拿取验证码，只做验证，不保存在数据库中
      * @Params [code, email]
-     * @return java.lang.Integer
      **/
     @Override
     public void verifyEmailMessage(String code, String email) throws FriendlyException {

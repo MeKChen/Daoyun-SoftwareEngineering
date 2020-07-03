@@ -11,10 +11,6 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-
-/**
- * 对数据操作工具
- */
 @Log4j2
 public class DataUtils {
     /**

@@ -194,13 +194,6 @@ public class UserInfo implements Serializable {
         setPwd(DigestUtils.md5DigestAsHex(newPwd.getBytes()));
     }
 
-
-
-    /**
-     * @Description //TODO  返回角色所拥有的角色：角色名和UserType
-     * @Param []
-     * @return java.util.Map<java.lang.String,java.util.List>
-     **/
     public Object getRole(){
         if (userRoles == null || userRoles.size() < 1) {
             return null;

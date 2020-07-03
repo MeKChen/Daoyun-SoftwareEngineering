@@ -1,6 +1,9 @@
 package com.signInStart.Entity.BaseClass;
 
 import java.io.Serializable;
+/**
+ * @Description //用于redis缓存，存储消息
+ **/
 
 public class MsgContent implements Serializable {
     public enum TYPE{
@@ -19,6 +22,7 @@ public class MsgContent implements Serializable {
         this.revicer = revicer;
         this.type = type;
     }
+
 
     @Override
     public String toString() {
