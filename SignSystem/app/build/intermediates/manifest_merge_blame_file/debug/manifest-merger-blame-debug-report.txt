@@ -1,0 +1,184 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.nie.sign"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="27" />
+9-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.READ_CONTACTS" />
+12-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:7:5-72
+12-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:7:22-69
+13    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+13-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:8:5-75
+13-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:8:22-72
+14    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+14-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:9:5-81
+14-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:9:22-78
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:10:5-79
+15-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:10:22-76
+16    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+16-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:11:5-76
+16-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:11:22-73
+17    <uses-permission android:name="android.permission.INTERNET" />
+17-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:5:5-67
+17-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:5:22-64
+18    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+18-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:13:5-70
+18-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:13:22-67
+19    <uses-permission android:name="android.permission.READ_SMS" />
+19-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:14:5-67
+19-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:14:22-64
+20    <uses-permission android:name="android.permission.GET_TASKS" />
+20-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:15:5-68
+20-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:15:22-65
+21    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+21-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:16:5-79
+21-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:16:22-76
+22    <uses-permission android:name="android.permission.INTERNET" />
+22-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:5:5-67
+22-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:5:22-64
+23    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+23-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:10:5-79
+23-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:10:22-76
+24    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+24-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:11:5-76
+24-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:11:22-73
+25    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+25-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:8:5-75
+25-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:8:22-72
+26    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+26-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:9:5-81
+26-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:9:22-78
+27    <uses-permission android:name="android.permission.INTERNET" />
+27-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:5:5-67
+27-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:5:22-64
+28    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+28-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:9:5-81
+28-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:9:22-78
+29    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+29-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:25:5-81
+29-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:25:22-78
+30    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+30-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:10:5-79
+30-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:10:22-76
+31    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+31-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:16:5-79
+31-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:16:22-76
+32    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+32-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:8:5-75
+32-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:8:22-72
+33    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+33-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:29:5-76
+33-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:29:22-73
+34    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+34-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:11:5-76
+34-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:11:22-73
+35    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+35-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:31:5-79
+35-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:31:22-76
+36    <uses-permission android:name="android.permission.WAKE_LOCK" />
+36-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:32:5-68
+36-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:32:22-65
+37    <uses-permission android:name="android.permission.CAMERA" />
+37-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:33:5-65
+37-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:33:22-62
+38    <uses-permission android:name="android.permission.INTERNET" />
+38-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:5:5-67
+38-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:5:22-64
+39    <uses-permission android:name="android.permission.VIBRATE" />
+39-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:35:5-66
+39-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:35:22-63
+40    <uses-permission android:name="android.permission.FLASHLIGHT" />
+40-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:36:5-69
+40-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:36:22-66
+41
+42    <application
+42-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:38:5-68:19
+43        android:name="com.nie.sign.application.SystemApplication"
+43-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:40:9-54
+44        android:allowBackup="true"
+44-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:41:9-35
+45        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+45-->[androidx.core:core:1.1.0] C:\Users\Irelia97\.gradle\caches\transforms-2\files-2.1\34b4ab0d8b65ac74ddd00d45b26dd963\core-1.1.0\AndroidManifest.xml:24:18-86
+46        android:debuggable="true"
+47        android:icon="@drawable/logo"
+47-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:42:9-38
+48        android:label="@string/app_name"
+48-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:43:9-41
+49        android:roundIcon="@drawable/logo"
+49-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:44:9-43
+50        android:supportsRtl="true"
+50-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:45:9-35
+51        android:testOnly="true"
+52        android:theme="@style/AppTheme" >
+52-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:46:9-40
+53        <meta-data
+53-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:48:9-50:64
+54            android:name="com.amap.api.v2.apikey"
+54-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:49:13-50
+55            android:value="7aa7820df148d8d0842be1a61022fed0" />
+55-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:50:13-61
+56
+57        <activity android:name="com.nie.sign.aciivity.LoginActivity" >
+57-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:52:9-58:20
+57-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:52:19-57
+58            <intent-filter>
+58-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:53:13-57:29
+59                <action android:name="android.intent.action.MAIN" />
+59-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:54:17-69
+59-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:54:25-66
+60
+61                <category android:name="android.intent.category.LAUNCHER" />
+61-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:56:17-77
+61-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:56:27-74
+62            </intent-filter>
+63        </activity>
+64
+65        <service android:name="com.amap.api.location.APSService" />
+65-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:59:9-76
+65-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:59:18-65
+66
+67        <activity android:name="com.nie.sign.MainActivity" />
+67-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:61:9-50
+67-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:61:19-47
+68        <activity android:name="com.nie.sign.aciivity.RegisterActivity" />
+68-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:62:9-63
+68-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:62:19-60
+69        <activity android:name="com.nie.sign.aciivity.ForgetPasswordActivity" />
+69-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:63:9-69
+69-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:63:19-66
+70        <activity android:name="com.nie.sign.aciivity.AddClassActivity" />
+70-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:64:9-63
+70-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:64:19-60
+71        <activity android:name="com.nie.sign.aciivity.ClassDetailActivity" />
+71-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:65:9-66
+71-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:65:19-63
+72        <activity android:name="com.nie.sign.zxing.android.CaptureActivity" />
+72-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:66:9-67
+72-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:66:19-64
+73        <activity android:name="com.nie.sign.aciivity.MyClassActivity" />
+73-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:67:9-62
+73-->C:\Users\Irelia97\Desktop\SignSystem\SignSystem\app\src\main\AndroidManifest.xml:67:19-59
+74
+75        <provider
+75-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Irelia97\.gradle\caches\transforms-2\files-2.1\e953a6c6aa473293c3a94459e549ecaa\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:23:9-27:43
+76            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+76-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Irelia97\.gradle\caches\transforms-2\files-2.1\e953a6c6aa473293c3a94459e549ecaa\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:24:13-79
+77            android:authorities="com.nie.sign.lifecycle-process"
+77-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Irelia97\.gradle\caches\transforms-2\files-2.1\e953a6c6aa473293c3a94459e549ecaa\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:25:13-69
+78            android:exported="false"
+78-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Irelia97\.gradle\caches\transforms-2\files-2.1\e953a6c6aa473293c3a94459e549ecaa\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:26:13-37
+79            android:multiprocess="true" />
+79-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Irelia97\.gradle\caches\transforms-2\files-2.1\e953a6c6aa473293c3a94459e549ecaa\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:27:13-40
+80    </application>
+81
+82</manifest>
