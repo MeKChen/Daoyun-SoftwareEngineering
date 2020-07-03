@@ -55,11 +55,8 @@ public class UserCourse implements Serializable {
     public UserCourse(UserInfo userInfo, Course course) {
         this.userInfo = userInfo;
         this.course = course;
-//        this.score =0 ;
     }
 
-//    public UserCourse() {
-//    }
 
     public Long getId() {
         return id;
@@ -133,13 +130,6 @@ public class UserCourse implements Serializable {
         this.modifyBy = modifyBy;
     }
 
-//    public String getIsDefault() {
-//    return isDefault;
-//    }
-
-//    public void setIsDefault(String isDefault) {
-//        this.isDefault = isDefault;
-//    }
 
     public String getAccount(){
         if (userInfo != null) {

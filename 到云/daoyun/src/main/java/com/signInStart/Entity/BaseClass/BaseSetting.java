@@ -1,5 +1,5 @@
 package com.signInStart.Entity.BaseClass;
-
+//基本角色
 public class BaseSetting {
     public enum STATUS {
         Normal_SYS,

@@ -1,11 +1,5 @@
 package com.signInStart.Entity;
-/**
- * @Description //TODO  角色信息表；
- * //TODO 由角色来控制系统的权限，role表中存储各个角色的信息，其中userType是role所属的角色类型，是最终权限控制的归属
- * //TODO 本来userType是应该独立一张表的，但由于时间紧迫，就不建立了
- * @Param
- * @return
- **/
+
 import com.signInStart.Entity.BaseClass.BaseSetting;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -27,10 +21,6 @@ public class Role implements Serializable {
     @Column(nullable = false)
     private String roleName;
 
-//    @Column()
-//    private Long parentRole = 0L; //0表示无父角色     //废弃
-
-    //角色所属类型：普通用户、管理员、超级管理员; 角色类型决定用户具有哪些权限；
     @Column()
     private String userType = BaseSetting.ROLE.User_SYS.toString()
 
@@ -68,13 +58,6 @@ public class Role implements Serializable {
         roleMenus = new ArrayList<>();
     }
 
-//    public String getStatus() {
-//        return status;
-//    }
-//
-//    public void setStatus(String status) {
-//        this.status = status;
-//    }
 
     public Long getRoleId() {
         return roleId;
